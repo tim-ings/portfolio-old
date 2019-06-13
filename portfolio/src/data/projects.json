@@ -1,0 +1,251 @@
+[
+    {
+        "name": "Dominion",
+        "slug": "Dominion",
+        "category": "game",
+        "description": "Dominion is a multiplayer 4X grand stratergy game based on Civilization 5 and written in C# using XNA/MonoGame. Dominion's engine contains a custom C# WinForms like library that it uses for its user interface. A graphical designer is used to design forms for the game. The game is content driven so users can add their own mod packs generated with the included ArwicXmlEditor tool. Every game board is procedurally generated and units move with A* pathfinding.",
+        "tech": [
+            "C#",
+            "Xna",
+            "MonoGame",
+            "WinForms"
+        ],
+        "live_demo": false
+    },
+    {
+        "name": "Run",
+        "slug": "Run",
+        "category": "game",
+        "description": "Run is an infinite runner game developed in unity. It is based on Rayman Jungle Run for iOS. Press any key to make the player jump off the ground or wall he is stuck to.",
+        "tech": [
+            "Unity",
+            "C#"
+        ],
+        "live_demo": true,
+        "live_demo_url": "https://demo.tim-ings.com/run"
+    },
+    {
+        "name": "Pong",
+        "slug": "Pong",
+        "category": "game",
+        "description": "The classic game pong, implemented in an HTML5 canvas.",
+        "tech": [
+            "HTML5",
+            "JavaScript"
+        ],
+        "live_demo": true,
+        "live_demo_url": "https://tim-ings.github.io/Pong/"
+    },
+    {
+        "name": "Infinite Frontier",
+        "slug": "InfiniteFrontier",
+        "category": "game",
+        "tech": [
+            "C#",
+            "Xna",
+            "MonoGame"
+        ],
+        "description": "Infinite Frontier is a space themed grand stratergy game. It is built on an older version of Dominion's engine.",
+        "live_demo": false
+    },
+
+    {
+        "name": "ElvUI Better Talent Frame",
+        "slug": "ElvUI_BetterTalentFrame",
+        "category": "wow-addon",
+        "description": "ElvUI Better Talent Frame is a user interface AddOn for World of Warcraft. It is an extension of the popular AddOn ElvUI. This AddOn improves the functionality of the talent frame by adding player created profiles and allowing the player to see his selected talents for his inactive specialisations.",
+        "tech": [
+            "Lua"
+        ],
+        "live_demo": false,
+        "curse_repo": ""
+    },
+    {
+        "name": "Arwic Alt Manager",
+        "slug": "ArwicAltManager",
+        "category": "wow-addon",
+        "description": "Arwic Alt Manager is a user interface AddOn for World of Warcraft. It stores useful data about every character on a player's account and displays it in a table.",
+        "tech": [
+            "Lua"
+        ],
+        "live_demo": false
+    },
+    {
+        "name": "Wow Discord Rich Presence",
+        "slug": "WowDiscordRichPresence",
+        "category": "wow-addon",
+        "description": "Wow Discord Rich Presence is a python script and a World of Warcrtaft AddOn that work together to set a discord users current activity to what they are doing in World of Warcraft. The AddOn gathers data from the game and displays it to the python script, which updates the users discord presence.",
+        "tech": [
+            "Lua",
+            "Python",
+            "Discord"
+        ],
+        "live_demo": false
+    },
+    {
+        "name": "Simc Dungeon Jorunal",
+        "slug": "SimcDungeonJorunal",
+        "category": "wow-addon",
+        "description": "Simc Dungeon Jorunal is a user interface AddOn for World of Warcraft. It provides a function to generate simulationcraft input based on boss loot tables found in the dungeon journal. The user can take this output and input it into simulationcraft, which is a program that tells you what gear will allow your character to do the most damage.",
+        "tech": [
+            "Lua"
+        ],
+        "live_demo": false
+    },
+    {
+        "name": "Town of Darkshire",
+        "slug": "TownOfDarkshire",
+        "category": "wow-addon",
+        "description": "Town of Darkshire is a user interface AddOn for World of Warcraft. It is a game based on Town of Salem or Mafia that runs inside of world of warcraft.",
+        "tech": [
+            "Lua"
+        ],
+        "live_demo": false
+    },
+    {
+        "name": "ElvUI Recount Recount Inherit Global Fade",
+        "slug": "ElvUI_RecountIGF",
+        "category": "wow-addon",
+        "description": "ElvUI Recount Inherit Global Fade is a user interface AddOn for World of Warcraft. It is an extension of the popular AddOn ElvUI. It is a small AddOn that causes another AddOn, recount, to respect the interface fading feature provided by the AddOn ElvUI.",
+        "tech": [
+            "Lua"
+        ],
+        "live_demo": false
+    },
+    {
+        "name": "Pet Battle Scripts",
+        "slug": "PetBattleScripts",
+        "category": "wow-addon",
+        "description": "Pet Battle Scripts is a collection of scripts used in the World of Warcraft AddOn tdPetBattleScript. These scripts allow the automation of pet battles (similar to pokemon) within world of warcraft.",
+        "tech": [
+            "Lua"
+        ],
+        "live_demo": false
+    },
+    {
+        "name": "Spam Invite",
+        "slug": "SpamInvite",
+        "category": "wow-addon",
+        "description": "Spam Invite is a very simple World of Warcraft AddOn that invites a player who says '1' in a chat channel to the player's party.",
+        "tech": [
+            "Lua"
+        ],
+        "live_demo": false
+    },
+    
+    {
+        "name": "Movie Rankings",
+        "slug": "MovieRankings",
+        "category": "website",
+        "description": "Movie Rankings is a website that allows users show off their favourite movies and create polls about them. Utilises Facebook OAuth2 for authentication.",
+        "tech": [
+            "Flask",
+            "Python",
+            "Jinja",
+            "HTML5",
+            "CSS",
+            "Bootstrap"
+        ],
+        "live_demo": true,
+        "live_demo_url": "https://movies.tim-ings.com/"
+    },
+    {
+        "name": "Bastion Droptimizer",
+        "slug": "DroptimizerServer",
+        "category": "website",
+        "description": "Bastion Droptimizer is a website for World of Warcraft that aggregates the results of raidbots.com simulation reports. These reports are used to determine how much of an upgrade an item a boss drops is for a player. This website groups reports for every player in a raid team and enables leadership to make better decisions about how to distribute loot.",
+        "tech": [
+            "React",
+            "NodeJS",
+            "JavaScript"
+        ],
+        "live_demo": true,
+        "live_demo_url": "https://loot.arwic.io/"
+    },
+    {
+        "name": "Gabr",
+        "slug": "Gabr",
+        "category": "website",
+        "description": "Gabr is a microblogging website based on twitter.",
+        "tech": [
+            "Django",
+            "Python",
+            "HTML5",
+            "JavaScript",
+            "Bootstrap",
+            "Sass"
+        ],
+        "live_demo": true,
+        "live_demo_url": "http://gabr.tim-ings.com/"
+    },
+    {
+        "name": "Oldschool Runescape World Ping",
+        "slug": "OSRSWorldPing",
+        "category": "website",
+        "description": "Oldschool Runescape World Ping is a web utility that allows the user to check their ping to each runescape game server.",
+        "tech": [
+            "HTML5",
+            "Bootstrap",
+            "JavaScript"
+        ],
+        "live_demo": true,
+        "live_demo_url": "http://osrsping.arwic.io/"
+    },
+    {
+        "name": "Attendance Report",
+        "slug": "AttendanceReport",
+        "category": "website",
+        "description": "Attendance Report is a tool that generates a report showing how often players are late, leave early, or fail to attend World of Warcraft raids based on their presence in combat log data retrieved from warcraftlogs.com.",
+        "tech": [
+            "HTML5",
+            "JavaScript",
+            "Bootstrap"
+        ],
+        "live_demo": true,
+        "live_demo_url": "http://attendance.arwic.io/"
+    },
+    
+    {
+        "name": "Web Server",
+        "slug": "WebServer",
+        "category": "program",
+        "description": "Web Server is a basic http web server written in python.",
+        "tech": [
+            "Python"
+        ],
+        "live_demo": false
+    },
+    {
+        "name": "CS Piano",
+        "slug": "CSPiano",
+        "category": "program",
+        "description": "CSPiano is a simple music player that uses console beeps and its own file format. Pass a text file with music code in it as an argument and CSPiano will play it in console beeps.",
+        "tech": [
+            "C#"
+        ],
+        "live_demo": false
+    },
+    
+    {
+        "name": "Arwic Bot",
+        "slug": "ArwicBot",
+        "category": "chat-bot",
+        "description": "ArwicBot is a modular bot for the chat app discord. Current modules include; user permissions, youtube music player, server administration, embeded messages, world of warcraft utilities, and fun hidden responses",
+        "tech": [
+            "Python",
+            "Discord"
+        ],
+        "live_demo": false
+    },
+    {
+        "name": "Needs More JPEG Bot",
+        "slug": "NeedsMoreJPEGBot",
+        "category": "chat-bot",
+        "description": "Needs More JPEG Bot is a bot for reddit.com. It responds to commenters requests for a lower qaulity version of an image.",
+        "tech": [
+            "Python",
+            "Reddit"
+        ],
+        "live_demo": false
+    }
+]
