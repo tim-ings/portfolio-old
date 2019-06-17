@@ -3,6 +3,7 @@ import Project from '../components/Project.js';
 import projects from '../data/projects.json';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
+import Header from '../components/Header.js'
 
 class Portfolio extends React.Component {
     
@@ -41,6 +42,8 @@ class Portfolio extends React.Component {
         }
 
         return (
+            <>
+            <Header></Header>
             <Tabs defaultActiveKey="websites" id="uncontrolled-tab-example">
                 <Tab eventKey="websites" title="Websites">
                     {proj_websites}
@@ -55,6 +58,7 @@ class Portfolio extends React.Component {
                     {proj_addons}
                 </Tab>
             </Tabs>
+            </>
         )
     }
 }

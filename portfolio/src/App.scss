@@ -1,0 +1,40 @@
+$col-pri: #e8e8e8;
+$col-body-background: #1e1e1e;
+$col-background: #252526;
+$col-border: #e1e8ed;
+$col-text-pri: #e8e8e8;
+$col-text-sec: #919191;
+$col-text-error: #7c2527;
+
+$font-light: 100;
+$font-regular: 400;
+$font-bold: 600;
+
+$border-radius: 0.3125rem;
+$border-size: 0.0625rem;
+$border-style: solid;
+$padding: 0.625rem;
+$margin: 0.25rem;
+
+@keyframes fadein {
+    from { opacity: 0; }
+    to   { opacity: 1; }
+}
+
+@keyframes slideup {
+    from { transform: translateY(30px); }
+    from { transform: translateY(0px); }
+}
+
+#bs-override, body {
+    padding-top: 3.5rem;
+    background-color: $col-body-background;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    line-height: 1.5;
+    color: $col-text-pri;
+    font-size: 1rem;
+    margin-bottom: 10rem;
+}
+
+@import "./scss/header";
+@import "./scss/typewriter";
