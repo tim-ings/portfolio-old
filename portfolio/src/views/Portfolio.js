@@ -42,16 +42,16 @@ class Portfolio extends React.Component {
 
         return (
             <Tabs defaultActiveKey="websites" id="uncontrolled-tab-example">
-                <Tab eventKey="websites" title="websites">
+                <Tab eventKey="websites" title="Websites">
                     {proj_websites}
                 </Tab>
-                <Tab eventKey="programs" title="programs">
+                <Tab eventKey="programs" title="Programs">
                     {proj_programs}
                 </Tab>
-                <Tab eventKey="games" title="games">
+                <Tab eventKey="games" title="Games">
                     {proj_games}
                 </Tab>
-                <Tab eventKey="addons" title="addons">
+                <Tab eventKey="addons" title="AddOns">
                     {proj_addons}
                 </Tab>
             </Tabs>
