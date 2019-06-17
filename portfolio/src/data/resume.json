@@ -1,0 +1,107 @@
+[
+    {
+        "name": "University of Western Australia",
+        "start": 2015,
+        "end": 2017,
+        "location": "Crawley, WA, Australia",
+        "coursework": [
+            {
+                "title": "Object-oriented Programming and Software Engineering",
+                "code": "CITS1001",
+                "tags": [
+                    "Java"
+                ]
+            },
+            {
+                "title": "Global Challenges in Engineering",
+                "code": "ENSC1001",
+                "tags": [
+                    "Engineering"
+                ]
+            },
+            {
+                "title": "Relational Database Management Systems",
+                "code": "CITS1402",
+                "tags": [
+                    "Database",
+                    "MySQL"
+                ]
+            },
+            {
+                "title": "Programming and Systems",
+                "code": "CITS2002",
+                "tags": [
+                    "C"
+                ]
+            },
+            {
+                "title": "Problem Solving and Programming",
+                "code": "CITS1401",
+                "tags": [
+                    "Python"
+                ]
+            },
+            {
+                "title": "Data Structures and Algorithms",
+                "code": "CITS2200",
+                "tags": [
+                    "Java",
+                    "Data Structures"
+                ]
+            },
+            {
+                "title": "Networks and Security",
+                "code": "CITS3002",
+                "tags": [
+                    "Networking",
+                    "C",
+                    "Python"
+                ]
+            },
+            {
+                "title": "Graphics and Animation",
+                "code": "CITS3003",
+                "tags": [
+                    "OpenGL",
+                    "C",
+                    "3D Graphics",
+                    "3D Animations"
+                ]
+            },
+            {
+                "title": "Statistics for Science",
+                "code": "STAT1400",
+                "tags": [
+                    "Statistics",
+                    "Data Science"
+                ]
+            },
+            {
+                "title": "Computer Analysis and Visualisation",
+                "code": "CITS2401",
+                "tags": [
+                    "Python",
+                    "Excel"
+                ]
+            },
+            {
+                "title": "Data Warehousing",
+                "code": "CITS3401",
+                "tags": [
+                    "Database",
+                    "SQL Server",
+                    "Data Mining",
+                    "Data Science"
+                ]
+            },
+            {
+                "title": "Agile Web Development",
+                "code": "CITS3403",
+                "tags": [
+                    "Web Development",
+                    ""
+                ]
+            }
+        ]
+    }
+]

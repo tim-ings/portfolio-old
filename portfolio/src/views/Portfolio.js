@@ -1,28 +1,39 @@
 import React from 'react';
-import Project from '../components/Project.js';
-import projects from '../data/projects.json';
+import ProjectData from '../data/projects.json';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import Header from '../components/Header.js'
 
-class Portfolio extends React.Component {
+class Project extends React.Component {
+
+    constructor(props) {
+        super();
+        this.baseGitHubUrl = "https://github.com/tim-ings/";
+    }
+
+    render() {
+        // send the user to the github releases unless a live demo exists
+        let demo_url = this.baseGitHubUrl + this.props.data.slug + "/releases";
+        let demo_label = "Download";
+        if (this.props.data.live_demo) {
+            demo_url = this.props.data.live_demo_url;
+            demo_label = "Live Demo";
+        }
+
+        return (
+            <div>
+                <h1>{this.props.data.name}</h1>
+                <p>{this.props.data.description}</p>
+                <a href={this.baseGitHubUrl + this.props.data.slug}>GitHub</a>
+                <a href={demo_url}>{demo_label}</a>
+            </div>
+        )
+    }
+}
+
+class ProjectTabs extends React.Component {
     
     constructor(props) {
         super();
-        this.state = {
-            tabKey: "websites"
-        };
-        this.tabCategories = [
-            "Websites",
-            "Programs",
-            "Games",
-            "AddOns"
-        ]
-        this.handleSelect = this.handleSelect.bind(this);
-    }
-
-    handleSelect(key) {
-        this.setState({ tabKey: key });
     }
 
     render() {
@@ -30,9 +41,9 @@ class Portfolio extends React.Component {
         const proj_programs = [];
         const proj_games = [];
         const proj_addons = [];
-        for (let i = 0; i < projects.length; i++) {
-            let proj = (<Project key={i} data={projects[i]} />);
-            switch(projects[i].category) {
+        for (let i = 0; i < ProjectData.length; i++) {
+            let proj = (<Project key={i} data={ProjectData[i]} />);
+            switch(ProjectData[i].category) {
                 case "website": proj_websites.push(proj); break;
                 case "program": proj_programs.push(proj); break;
                 case "game": proj_games.push(proj); break;
@@ -42,9 +53,7 @@ class Portfolio extends React.Component {
         }
 
         return (
-            <>
-            <Header></Header>
-            <Tabs defaultActiveKey="websites" id="uncontrolled-tab-example">
+            <Tabs>
                 <Tab eventKey="websites" title="Websites">
                     {proj_websites}
                 </Tab>
@@ -58,7 +67,17 @@ class Portfolio extends React.Component {
                     {proj_addons}
                 </Tab>
             </Tabs>
-            </>
+        )
+    }
+}
+
+class Portfolio extends React.Component {
+    
+    render() {
+        return (
+            <div>
+                <ProjectTabs></ProjectTabs>
+            </div>
         )
     }
 }
