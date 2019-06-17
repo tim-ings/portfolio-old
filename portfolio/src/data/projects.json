@@ -16,13 +16,13 @@
         "name": "Run",
         "slug": "Run",
         "category": "game",
-        "description": "Run is an infinite runner game developed in unity. It is based on Rayman Jungle Run for iOS. Press any key to make the player jump off the ground or wall he is stuck to.",
+        "description": "Run is an infinite runner style game developed in unity. It is based on Rayman Jungle Run for iOS. Press any key to make the player jump off the ground or wall he is stuck to.",
         "tech": [
             "Unity",
             "C#"
         ],
         "live_demo": true,
-        "live_demo_url": "https://demo.tim-ings.com/run"
+        "live_demo_url": "https://tim-ings.github.io/Run/"
     },
     {
         "name": "Pong",
