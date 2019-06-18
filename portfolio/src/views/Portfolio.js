@@ -75,8 +75,7 @@ class Project extends React.Component {
 
         let tech_tags = [];
         for (let i = 0; i < this.props.data.tech.length; i++) {
-            let tt = this.props.data.tech[i];
-            tech_tags.push(<TechTag tech={tt} />);
+            tech_tags.push(<span className="tech-tag">{this.props.data.tech[i]}</span>);
         }
 
         return (
