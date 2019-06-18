@@ -1,7 +1,7 @@
 $col-pri: #e8e8e8;
 $col-body-background: #1e1e1e;
 $col-background: #252526;
-$col-border: #e1e8ed;
+$col-border: #0e0e0e;
 $col-text-pri: #e8e8e8;
 $col-text-sec: #919191;
 $col-text-error: #7c2527;
@@ -28,7 +28,7 @@ $margin: 0.25rem;
 
 #bs-override, body {
     padding-top: 3.5rem;
-    background-color: $col-body-background;
+    background-color: $col-body-background !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
     color: $col-text-pri;
@@ -39,3 +39,4 @@ $margin: 0.25rem;
 @import "./scss/header";
 @import "./scss/typewriter";
 @import "./scss/portfolio";
+@import "./scss/button";

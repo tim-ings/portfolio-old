@@ -10,7 +10,7 @@
             "MonoGame",
             "WinForms"
         ],
-        "live_demo": false
+        "header_img_url": "img/headers/Dominion.png"
     },
     {
         "name": "Run",
@@ -21,8 +21,8 @@
             "Unity",
             "C#"
         ],
-        "live_demo": true,
-        "live_demo_url": "https://tim-ings.github.io/Run/"
+        "live_demo_url": "https://tim-ings.github.io/Run/",
+        "header_img_url": "img/headers/Run.png"
     },
     {
         "name": "Pong",
@@ -33,8 +33,8 @@
             "HTML5",
             "JavaScript"
         ],
-        "live_demo": true,
-        "live_demo_url": "https://tim-ings.github.io/Pong/"
+        "live_demo_url": "https://tim-ings.github.io/Pong/",
+        "header_img_url": "img/headers/Pong.png"
     },
     {
         "name": "Infinite Frontier",
@@ -46,7 +46,7 @@
             "MonoGame"
         ],
         "description": "Infinite Frontier is a space themed grand stratergy game. It is built on an older version of Dominion's engine.",
-        "live_demo": false
+        "header_img_url": "img/headers/InfiniteFrontier.png"
     },
 
     {
@@ -57,8 +57,8 @@
         "tech": [
             "Lua"
         ],
-        "live_demo": false,
-        "curse_repo": ""
+        "curse_url": "https://www.curseforge.com/wow/addons/elvui_bettertalentframe",
+        "header_img_url": "img/headers/BetterTalentFrame.png"
     },
     {
         "name": "Arwic Alt Manager",
@@ -68,7 +68,8 @@
         "tech": [
             "Lua"
         ],
-        "live_demo": false
+        "curse_url": "https://www.curseforge.com/wow/addons/arwicaltmanager",
+        "header_img_url": "img/headers/ArwicAltManager.png"
     },
     {
         "name": "Wow Discord Rich Presence",
@@ -80,27 +81,28 @@
             "Python",
             "Discord"
         ],
-        "live_demo": false
+        "header_img_url": "img/headers/DiscordRichPres.png"
     },
     {
         "name": "Simc Dungeon Jorunal",
-        "slug": "SimcDungeonJorunal",
+        "slug": "simcdungeonjournal",
         "category": "wow-addon",
         "description": "Simc Dungeon Jorunal is a user interface AddOn for World of Warcraft. It provides a function to generate simulationcraft input based on boss loot tables found in the dungeon journal. The user can take this output and input it into simulationcraft, which is a program that tells you what gear will allow your character to do the most damage.",
         "tech": [
             "Lua"
         ],
-        "live_demo": false
+        "curse_url": "https://www.curseforge.com/wow/addons/simcdj",
+        "header_img_url": "img/headers/SimcDJ2.png"
     },
     {
         "name": "Town of Darkshire",
         "slug": "TownOfDarkshire",
         "category": "wow-addon",
-        "description": "Town of Darkshire is a user interface AddOn for World of Warcraft. It is a game based on Town of Salem or Mafia that runs inside of world of warcraft.",
+        "description": "Town of Darkshire is a user interface AddOn for World of Warcraft. It is a game based on Town of Salem that runs inside of world of warcraft.",
         "tech": [
             "Lua"
         ],
-        "live_demo": false
+        "header_img_url": "img/headers/TownOfDarkshire.png"
     },
     {
         "name": "ElvUI Recount Recount Inherit Global Fade",
@@ -110,7 +112,8 @@
         "tech": [
             "Lua"
         ],
-        "live_demo": false
+        "curse_url": "https://www.curseforge.com/wow/addons/simcdj",
+        "header_img_url": "img/headers/RecountIGF.png"
     },
     {
         "name": "Pet Battle Scripts",
@@ -120,19 +123,9 @@
         "tech": [
             "Lua"
         ],
-        "live_demo": false
+        "header_img_url": "img/headers/PetBattleScript.png"
     },
-    {
-        "name": "Spam Invite",
-        "slug": "SpamInvite",
-        "category": "wow-addon",
-        "description": "Spam Invite is a very simple World of Warcraft AddOn that invites a player who says '1' in a chat channel to the player's party.",
-        "tech": [
-            "Lua"
-        ],
-        "live_demo": false
-    },
-    
+
     {
         "name": "Movie Rankings",
         "slug": "MovieRankings",
@@ -146,8 +139,8 @@
             "CSS",
             "Bootstrap"
         ],
-        "live_demo": true,
-        "live_demo_url": "https://movies.tim-ings.com/"
+        "live_demo_url": "https://movies.tim-ings.com/",
+        "header_img_url": "img/headers/MovieRankings.png"
     },
     {
         "name": "Bastion Droptimizer",
@@ -159,8 +152,8 @@
             "NodeJS",
             "JavaScript"
         ],
-        "live_demo": true,
-        "live_demo_url": "https://loot.arwic.io/"
+        "live_demo_url": "https://loot.arwic.io/",
+        "header_img_url": "img/headers/Droptimizer.png"
     },
     {
         "name": "Gabr",
@@ -175,8 +168,7 @@
             "Bootstrap",
             "Sass"
         ],
-        "live_demo": true,
-        "live_demo_url": "http://gabr.tim-ings.com/"
+        "header_img_url": "img/headers/Gabr.png"
     },
     {
         "name": "Oldschool Runescape World Ping",
@@ -188,8 +180,8 @@
             "Bootstrap",
             "JavaScript"
         ],
-        "live_demo": true,
-        "live_demo_url": "http://osrsping.arwic.io/"
+        "live_demo_url": "http://osrsping.arwic.io/",
+        "header_img_url": "img/headers/OSRSWorldPing.png"
     },
     {
         "name": "Attendance Report",
@@ -201,8 +193,8 @@
             "JavaScript",
             "Bootstrap"
         ],
-        "live_demo": true,
-        "live_demo_url": "http://attendance.arwic.io/"
+        "live_demo_url": "http://attendance.arwic.io/",
+        "header_img_url": "img/headers/AttendanceReport.png"
     },
     
     {
@@ -213,7 +205,7 @@
         "tech": [
             "Python"
         ],
-        "live_demo": false
+        "header_img_url": "img/headers/WebServer.png"
     },
     {
         "name": "CS Piano",
@@ -223,19 +215,19 @@
         "tech": [
             "C#"
         ],
-        "live_demo": false
+        "header_img_url": "img/headers/CSPiano.png"
     },
     
     {
         "name": "Arwic Bot",
         "slug": "ArwicBot",
         "category": "chat-bot",
-        "description": "ArwicBot is a modular bot for the chat app discord. Current modules include; user permissions, youtube music player, server administration, embeded messages, world of warcraft utilities, and fun hidden responses",
+        "description": "ArwicBot is a modular bot for the chat app discord. Current modules include; user permissions, youtube music player, server administration, embeded messages, world of warcraft utilities, and fun hidden responses.",
         "tech": [
             "Python",
             "Discord"
         ],
-        "live_demo": false
+        "header_img_url": "img/headers/ArwicBot.png"
     },
     {
         "name": "Needs More JPEG Bot",
@@ -246,6 +238,6 @@
             "Python",
             "Reddit"
         ],
-        "live_demo": false
+        "header_img_url": "img/headers/JPEGBot.png"
     }
 ]

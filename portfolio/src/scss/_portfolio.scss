@@ -1,0 +1,37 @@
+.nav-item.nav-link {
+    background-color: $col-background !important;
+    color: $col-text-pri !important;
+    border-color: $col-border !important;
+
+    &:hover {
+        background-color: lighten($col-background, 30%) !important;
+    }
+}
+
+.nav-item.nav-link.active {
+    background-color: lighten($col-background, 20%) !important;
+    color: $col-text-pri !important;
+    border-color: $col-border !important;
+}
+
+.nav.nav-tabs {
+    border: none;
+}
+
+.card-columns {
+    border: 1px solid $col-border;
+    background-color: lighten($col-background, 1%);
+    padding: 20px;
+}
+
+.card {
+    border: none !important;
+
+}
+
+.card-body {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    background-color: lighten($col-background, 7.5%);
+    border: none;
+}

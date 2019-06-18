@@ -1,0 +1,15 @@
+.btn.btn-primary {
+    color: $col-text-pri;
+    background-color: $col-background;
+    border-color: $col-border;
+
+    &:hover {
+        background-color: lighten($col-background, 10%);
+        border-color: lighten($col-border, 10%);
+    }
+
+    &:active {
+        background-color: lighten($col-background, 20%) !important;
+        border-color: lighten($col-border, 20%) !important;
+    }
+}
