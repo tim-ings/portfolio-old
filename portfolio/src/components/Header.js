@@ -11,13 +11,13 @@ class HeaderItem extends React.Component {
         const classeNames = `item ${this.props.info.side}`;
         return (
             <div className={classeNames}>
-                <Link className="link" to={this.props.info.url}>
+                <a className="link" href={this.props.info.url}>
                     <div className="hover-typewriter-container" style={{width: 150 + 'px'}}>
                         <div className="hover-typewriter">
                             {this.props.info.title}
                         </div>
                     </div>
-                </Link>
+                </a>
             </div>
         )
     }
