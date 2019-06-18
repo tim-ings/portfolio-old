@@ -5,7 +5,7 @@
         "category": "game",
         "description": "Dominion is a multiplayer 4X grand stratergy game based on Civilization 5 and written in C# using XNA/MonoGame. Dominion's engine contains a custom C# WinForms like library that it uses for its user interface. A graphical designer is used to design forms for the game. The game is content driven so users can add their own mod packs generated with the included ArwicXmlEditor tool. Every game board is procedurally generated and units move with A* pathfinding.",
         "tech": [
-            "C#",
+            "CSharp",
             "Xna",
             "MonoGame",
             "WinForms"
@@ -19,7 +19,7 @@
         "description": "Run is an infinite runner style game developed in unity. It is based on Rayman Jungle Run for iOS. Press any key to make the player jump off the ground or wall he is stuck to.",
         "tech": [
             "Unity",
-            "C#"
+            "CSharp"
         ],
         "live_demo_url": "https://tim-ings.github.io/Run/",
         "header_img_url": "img/headers/Run.png"
@@ -41,7 +41,7 @@
         "slug": "InfiniteFrontier",
         "category": "game",
         "tech": [
-            "C#",
+            "CSharp",
             "Xna",
             "MonoGame"
         ],
@@ -81,7 +81,8 @@
             "Python",
             "Discord"
         ],
-        "header_img_url": "img/headers/DiscordRichPres.png"
+        "header_img_url": "img/headers/DiscordRichPres.png",
+        "hide_download": true
     },
     {
         "name": "Simc Dungeon Jorunal",
@@ -102,7 +103,8 @@
         "tech": [
             "Lua"
         ],
-        "header_img_url": "img/headers/TownOfDarkshire.png"
+        "header_img_url": "img/headers/TownOfDarkshire.png",
+        "hide_download": true
     },
     {
         "name": "ElvUI Recount Recount Inherit Global Fade",
@@ -123,7 +125,8 @@
         "tech": [
             "Lua"
         ],
-        "header_img_url": "img/headers/PetBattleScript.png"
+        "header_img_url": "img/headers/PetBattleScript.png",
+        "hide_download": true
     },
 
     {
@@ -168,7 +171,8 @@
             "Bootstrap",
             "Sass"
         ],
-        "header_img_url": "img/headers/Gabr.png"
+        "header_img_url": "img/headers/Gabr.png",
+        "hide_download": true
     },
     {
         "name": "Oldschool Runescape World Ping",
@@ -213,7 +217,7 @@
         "category": "program",
         "description": "CSPiano is a simple music player that uses console beeps and its own file format. Pass a text file with music code in it as an argument and CSPiano will play it in console beeps.",
         "tech": [
-            "C#"
+            "CSharp"
         ],
         "header_img_url": "img/headers/CSPiano.png"
     },
@@ -227,7 +231,8 @@
             "Python",
             "Discord"
         ],
-        "header_img_url": "img/headers/ArwicBot.png"
+        "header_img_url": "img/headers/ArwicBot.png",
+        "hide_download": true
     },
     {
         "name": "Needs More JPEG Bot",
@@ -238,6 +243,7 @@
             "Python",
             "Reddit"
         ],
-        "header_img_url": "img/headers/JPEGBot.png"
+        "header_img_url": "img/headers/JPEGBot.png",
+        "hide_download": true
     }
 ]
