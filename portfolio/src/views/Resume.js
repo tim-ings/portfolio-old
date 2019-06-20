@@ -5,6 +5,9 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Helmet} from "react-helmet";
+import Button from "react-bootstrap/Button";
+import jsPDF from "jspdf";
+import html2canvas from "html2canvas";
 
 class School extends React.Component {
     
@@ -137,7 +140,46 @@ class WorkList extends React.Component {
 
 class Resume extends React.Component {
     
+    constructor(props) {
+        super();
+        this.state = {
+            renderForPrint: false
+        };
+    }
+
+    downloadPDF(sender) {
+        sender.setState({ renderForPrint: true });
+		html2canvas(document.querySelector('#resume-print-parent')).then(canvas => {
+			let pdf = new jsPDF('p', 'mm', 'a4');
+			pdf.addImage(canvas.toDataURL('image/png'), 'PNG', 10, 10, 190, 0);
+			pdf.save("tim-ings-resume.pdf");
+            sender.setState({ renderForPrint: false });
+        });
+    }
+
     render() {
+        let downloadButton = (
+            <Button id="download-pdf-button" className="download-button" onClick={() => { this.downloadPDF(this) }}>
+                <img style={{
+                    height: '1rem', 
+                    marginRight: '5px', 
+                    transform: 'translateY(-2px)'
+                }} src="img/logos/download_light.png" alt="" />
+                Download as PDF
+            </Button>
+        );
+        if (this.state.renderForPrint) {
+            downloadButton = (
+                <>
+                <p className="download-button" style={{marginLeft: "-100%"}}>
+                    Generated on {new Date(Date.now()).toDateString()}
+                </p>
+                <p>
+                    View an up to date version at <a href="https://www.tim-ings.com/resume">https://tim-ings.com/resume</a>
+                </p>
+                </>);
+        }
+
         return (
             <>
             <Helmet>
@@ -151,7 +193,8 @@ class Resume extends React.Component {
                     Tim's Résumé
                 </h1>
             </div>
-            <Container className="resume-page">
+            <Container id="resume-print-parent" className={"resume-page " + (this.state.renderForPrint ? "print-colors" : "")}>
+                {downloadButton}
                 <Row>
                     <Col md={3}>
                         <div className="resume-section">

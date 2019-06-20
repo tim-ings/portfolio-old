@@ -5685,17 +5685,6 @@ jsonify@~0.0.0:
   version "0.0.0"
   resolved "https://registry.yarnpkg.com/jsonify/-/jsonify-0.0.0.tgz#2c74b6ee41d93ca51b7b5aaee8f503631d252a73"
 
-jspdf-autotable@^3.0.13:
-  version "3.1.1"
-  resolved "https://registry.yarnpkg.com/jspdf-autotable/-/jspdf-autotable-3.1.1.tgz#6bc7856c6bacec778eaa6f13323faec9b39c97ac"
-
-jspdf-react@^1.0.10:
-  version "1.0.10"
-  resolved "https://registry.yarnpkg.com/jspdf-react/-/jspdf-react-1.0.10.tgz#1e2ba7f98657852e2c99098747ce5452205199c5"
-  dependencies:
-    jspdf "^1.5.3"
-    jspdf-autotable "^3.0.13"
-
 jspdf@^1.5.3:
   version "1.5.3"
   resolved "https://registry.yarnpkg.com/jspdf/-/jspdf-1.5.3.tgz#5a12c011479defabef5735de55c913060ed219f2"

@@ -115,3 +115,15 @@ h1.res-header {
         }
     }
 }
+
+.print-colors {
+    background-color: white;
+}
+
+.download-button {
+    float: right;
+    display: inline-block;
+    margin-left: -100%;
+    position: relative;
+    z-index: 99999;
+}
