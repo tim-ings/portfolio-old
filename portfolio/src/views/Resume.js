@@ -171,10 +171,9 @@ class Resume extends React.Component {
         if (this.state.renderForPrint) {
             downloadButton = (
                 <>
-                <p className="download-button" style={{marginLeft: "-100%"}}>
+                <p className="print-info" style={{marginLeft: "-100%"}}>
                     Generated on {new Date(Date.now()).toDateString()}
-                </p>
-                <p>
+                    <br />
                     View an up to date version at <a href="https://www.tim-ings.com/resume">https://tim-ings.com/resume</a>
                 </p>
                 </>);

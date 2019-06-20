@@ -122,8 +122,15 @@ h1.res-header {
 
 .download-button {
     float: right;
-    display: inline-block;
     margin-left: -100%;
     position: relative;
-    z-index: 99999;
+    z-index: 10;
+}
+
+.print-info {
+    float: right;
+    text-align: right;
+    margin-left: -100%;
+    position: relative;
+    z-index: 10;
 }
