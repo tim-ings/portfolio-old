@@ -30,9 +30,12 @@
 }
 
 .portfolio-header {
+    margin-bottom: 50px;
+
     .code {
         font-family: Consolas, monaco, monospace;
         color: $col-text-sec;
+        white-space: nowrap;
     }
     h1 {
         color: $col-text-pri;
