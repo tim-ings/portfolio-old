@@ -3,7 +3,7 @@ $col-body-background: #1e1e1e;
 $col-background: #252526;
 $col-border: #0e0e0e;
 $col-text-pri: #e8e8e8;
-$col-text-sec: #919191;
+$col-text-sec: #a8a8a8;
 $col-text-error: #7c2527;
 
 $font-light: 100;
@@ -27,7 +27,7 @@ $margin: 0.25rem;
 }
 
 #bs-override, body {
-    padding-top: 3.5rem;
+    padding-top: 100px;
     background-color: $col-body-background !important;
     font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     line-height: 1.5;
