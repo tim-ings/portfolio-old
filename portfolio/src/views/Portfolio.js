@@ -6,6 +6,7 @@ import Card from 'react-bootstrap/Card';
 import Button from 'react-bootstrap/Button';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Container from 'react-bootstrap/Container';
+import {Helmet} from "react-helmet";
 
 class Project extends React.Component {
 
@@ -180,18 +181,21 @@ class Portfolio extends React.Component {
     render() {
         return (
             <>
-                <div className="portfolio-header">
-                    <p className="code">
-                        user@tim-ings.com:~/portfolio$ ./view.sh {this.state.projTabsKey}
-                    </p>
-                    <h1>
-                        Tim's Portfolio
-                    </h1>
-                    <p>
-                        Below you can find a collection of my work sorted by project type. Each project may either have a live demo or a download link along with a link to the project on GitHub.
-                    </p>
-                </div>
-                <ProjectTabs tabKey={this.state.projTabsKey} onSelect={key => this.setState({projTabsKey: key})} />
+            <Helmet>
+                <title>Portfolio | Tim Ings</title>
+            </Helmet>
+            <div className="portfolio-header">
+                <p className="code">
+                    user@tim-ings.com:~/portfolio$ ./view.sh {this.state.projTabsKey}
+                </p>
+                <h1>
+                    Tim's Portfolio
+                </h1>
+                <p>
+                    Below you can find a collection of my work sorted by project type. Each project may either have a live demo or a download link along with a link to the project on GitHub.
+                </p>
+            </div>
+            <ProjectTabs tabKey={this.state.projTabsKey} onSelect={key => this.setState({projTabsKey: key})} />
             </>
         )
     }

@@ -6,9 +6,14 @@ import Resume from './views/Resume.js';
 import About from './views/About.js';
 import Header from './components/Header.js'
 import './App.scss'
+import {Helmet} from "react-helmet";
 
 function App() {
     return (
+        <>
+        <Helmet>
+            <title>Tim Ings</title>
+        </Helmet>
         <BrowserRouter>
             <Header />
             <Route exact path="/" component={Home}></Route>
@@ -16,6 +21,7 @@ function App() {
             <Route path="/resume" component={Resume}></Route>
             <Route path="/about" component={About}></Route>
         </BrowserRouter>
+        </>
     );
 }
 

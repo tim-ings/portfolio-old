@@ -4,6 +4,7 @@ import WorkData from '../data/work.json';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
+import {Helmet} from "react-helmet";
 
 class School extends React.Component {
     
@@ -139,6 +140,9 @@ class Resume extends React.Component {
     render() {
         return (
             <>
+            <Helmet>
+                <title>Résumé | Tim Ings</title>
+            </Helmet>
             <div className="portfolio-header">
                 <p className="code">
                     user@tim-ings.com:~/resume$ ./view.sh
