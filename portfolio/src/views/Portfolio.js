@@ -7,14 +7,6 @@ import Button from 'react-bootstrap/Button';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Container from 'react-bootstrap/Container';
 
-class TechTag extends React.Component {
-    render() {
-        return (
-            <span className="tech-tag">{this.props.tech}</span>
-        );
-    }
-}
-
 class Project extends React.Component {
 
     constructor(props) {
@@ -47,22 +39,7 @@ class Project extends React.Component {
             demo_label = "View on Curse";
             demo_icon = (<img style={{height: '1rem', transform: 'translateY(-2px)'}} src="img/logos/curse.png" alt="" />);
         }
-
-        let header_img_url = "https://img.purch.com/w/660/aHR0cDovL3d3dy5saXZlc2NpZW5jZS5jb20vaW1hZ2VzL2kvMDAwLzEwNC84MTkvb3JpZ2luYWwvY3V0ZS1raXR0ZW4uanBn"
-        if (this.props.data.header_img_url) {
-            header_img_url = this.props.data.header_img_url;
-        }
-
-        let btn_github = (
-            <Button target="_blank" rel="noopener noreferrer" style={{margin: '5px'}} href={this.baseGitHubUrl + this.props.data.slug}>
-                <img style={{
-                    height: '1rem',
-                    transform: 'translateY(-2px)'
-                }} src="img/logos/github_light.png"></img>
-                <span style={{marginLeft: '5px'}}>GitHub</span>
-            </Button>
-        );
-
+        // generate demo button
         let btn_demo = (
             <Button target="_blank" rel="noopener noreferrer" style={{margin: '5px'}} href={demo_url}>
                 {demo_icon}
@@ -73,6 +50,24 @@ class Project extends React.Component {
             btn_demo = null;
         }
 
+        // default to web server image for header
+        let header_img_url = "img/headers/WebServer.png"
+        if (this.props.data.header_img_url) {
+            header_img_url = this.props.data.header_img_url;
+        }
+
+        // style the github button and logo
+        let btn_github = (
+            <Button target="_blank" rel="noopener noreferrer" style={{margin: '5px'}} href={this.baseGitHubUrl + this.props.data.slug}>
+                <img style={{
+                    height: '1rem',
+                    transform: 'translateY(-2px)'
+                }} src="img/logos/github_light.png" alt=""></img>
+                <span style={{marginLeft: '5px'}}>GitHub</span>
+            </Button>
+        );
+
+        // create tech tags that tell the user what was used to create this project
         let tech_tags = [];
         for (let i = 0; i < this.props.data.tech.length; i++) {
             tech_tags.push(
@@ -80,6 +75,12 @@ class Project extends React.Component {
                     <span className={`tech-tag-icon tech-tag-${this.props.data.tech[i].toLowerCase()}`}></span>
                     {this.props.data.tech[i]}
                 </span>);
+        }
+
+        // create curse download counter
+        let download_counter = null;
+        if (this.props.data.curse_downloads) {
+            download_counter = (<span className="download-counter">{this.props.data.curse_downloads}+ downloads on curse</span>);
         }
 
         return (
@@ -92,8 +93,8 @@ class Project extends React.Component {
                     <br />
                     {btn_github}
                     {btn_demo}
+                    {download_counter}
                 </Card.Body>
-                
             </Card>
         )
     }
@@ -125,24 +126,41 @@ class ProjectTabs extends React.Component {
             <Container>
                 <Tabs>
                     <Tab eventKey="websites" title="Websites">
-                        <CardColumns>
-                            {proj_websites}
-                        </CardColumns>
+                        <div className="portfolio-tab">
+                            <h1>I have built a few websites over the years all utilising different technologies such as ReactJS, NodeJS, Django, Flask, JQuery, and raw HTML/JavaScript.</h1>
+                            <CardColumns>
+                                {proj_websites}
+                            </CardColumns>
+                        </div>
                     </Tab>
                     <Tab eventKey="programs" title="Programs">
-                        <CardColumns>
-                            {proj_programs}
-                        </CardColumns>
+                        <div className="portfolio-tab">
+                            <h1>Below are some programs and scripts I have written in languages such as Python, C#, and C/C++</h1>
+                            <CardColumns>
+                                {proj_programs}
+                            </CardColumns>
+                        </div>
                     </Tab>
                     <Tab eventKey="games" title="Games">
+                        <div className="portfolio-tab">
+                        <h1>Some of my firends and I began programming in high school because of a desire to create our own games and game modifications. Here are some of my projects utilising professionally developed engines such as Unity as well my own custom engine built on top of XNA/MonoGame.</h1>
                         <CardColumns>
-                            {proj_games}
-                        </CardColumns>
+                                {proj_games}
+                            </CardColumns>
+                        </div>
                     </Tab>
                     <Tab eventKey="addons" title="WoW AddOns">
-                        <CardColumns>
-                            {proj_addons}
-                        </CardColumns>
+                        <div className="portfolio-tab">
+                            <h1>
+                                Here you can find some of my user interface modifications for the game World of Warcraft. The World of Warcraft interface runs on Lua and I have learnt a lot about this scripting language in the process of writing these AddOns. Clicking on an AddOn's "View on Curse" button will take you to its curse forge page which displays the number of times my AddOn has been downloaded by other players for free.
+                                <br />
+                                <br />
+                                My AddOn's have a total of nearly 80,000 downloads on curse forge.
+                            </h1>
+                            <CardColumns>
+                                {proj_addons}
+                            </CardColumns>
+                        </div>
                     </Tab>
                 </Tabs>
             </Container>
@@ -154,7 +172,20 @@ class Portfolio extends React.Component {
     
     render() {
         return (
-            <ProjectTabs></ProjectTabs>
+            <>
+                <div className="portfolio-header">
+                    <p className="code">
+                        user@tim-ings.com:~/portfolio$ ./view.sh
+                    </p>
+                    <h1>
+                        Welcome to Tim's Portfolio
+                    </h1>
+                    <p>
+                        Below you can find a collection of my work sorted by project type. Each project may either have a live demo or a download link along with a link to the project on GitHub.
+                    </p>
+                </div>
+                <ProjectTabs />
+            </>
         )
     }
 }

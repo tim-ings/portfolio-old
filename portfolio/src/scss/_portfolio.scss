@@ -18,15 +18,8 @@
     border: none;
 }
 
-.card-columns {
-    border: 1px solid $col-border;
-    background-color: lighten($col-background, 1%);
-    padding: 20px;
-}
-
 .card {
     border: none !important;
-
 }
 
 .card-body {
@@ -34,6 +27,51 @@
     border-bottom-right-radius: 5px;
     background-color: lighten($col-background, 7.5%);
     border: none;
+}
+
+.portfolio-header {
+    .code {
+        font-family: Consolas, monaco, monospace;
+        color: $col-text-sec;
+    }
+    h1 {
+        color: $col-text-pri;
+        text-align: center;
+    }
+    h2 {
+        color: $col-text-pri;
+        text-align: center;
+    }
+    p {
+        color: $col-text-sec;
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+.portfolio-tab {
+    border: 1px solid $col-border;
+    background-color: lighten($col-background, 1%);
+    padding: 20px;
+
+    h1 {
+        color: $col-text-pri;
+        text-align: center;
+        font-size: 130%;
+        margin-bottom: 20px;
+        color: $col-text-sec;
+    }
+    p {
+        color: $col-text-sec;
+        max-width: 600px;
+        margin: 0 auto;
+    }
+}
+
+.download-counter {
+    color: #ff6d6d !important;
+    margin-left: 15px !important;
 }
 
 @media (min-width: 500px) {
