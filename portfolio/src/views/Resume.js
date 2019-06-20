@@ -20,12 +20,10 @@ class School extends React.Component {
         for (let i = 0; i < this.props.data.coursework.length; i++) {
             let cw = this.props.data.coursework[i];
             courseWork.push(
-                <ul className="course-work-list">
-                    <li className="course-work-itme">
-                        {cw.title}
-                        <span className="course-code">{cw.code}</span>
-                    </li>
-                </ul>
+                <li key={i} className="course-work-itme">
+                    {cw.title}
+                    <span className="course-code">{cw.code}</span>
+                </li>
             );
         }
 
@@ -55,7 +53,9 @@ class School extends React.Component {
                 </Row>
                 <br />
                 <p>Coursework:</p>
-                {courseWork}
+                <ul className="course-work-list">
+                    {courseWork}
+                </ul>
             </Container>
         )
     }

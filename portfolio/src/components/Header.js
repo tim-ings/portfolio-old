@@ -17,16 +17,22 @@ class HeaderItem extends React.Component {
                 </div>
             </div>
         );
-        let link = (<Link to={this.props.info.url} className="nav-link">{innerLink}</Link>);
+        let link = (
+            <Link to={this.props.info.url} className="nav-link">{innerLink}</Link>
+        );
         if (this.props.info.useATag) {
             // <Link> and parent bootstrap tags do not/make it hard support external sites like guthub, so use <a> and JS onclick to navigate to the url
-            link = (<a href={this.props.info.url} onClick={`window.open(${this.props.info.url})`} className="nav-link">{innerLink}</a>);
+            link = (
+                <a href={this.props.info.url} onClick={() => { window.open(this.props.info.url) }} className="nav-link" role="button">
+                    {innerLink}
+                </a>
+            );
         }
 
         return (
-            <Nav.Link>
-                {link}
-            </Nav.Link>
+            <>
+            {link}
+            </>
         )
     }
 }
