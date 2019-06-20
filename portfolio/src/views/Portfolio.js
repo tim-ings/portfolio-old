@@ -185,7 +185,7 @@ class Portfolio extends React.Component {
                         user@tim-ings.com:~/portfolio$ ./view.sh {this.state.projTabsKey}
                     </p>
                     <h1>
-                        Welcome to Tim's Portfolio
+                        Tim's Portfolio
                     </h1>
                     <p>
                         Below you can find a collection of my work sorted by project type. Each project may either have a live demo or a download link along with a link to the project on GitHub.

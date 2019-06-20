@@ -4,6 +4,8 @@
         "start": 2015,
         "end": 2017,
         "location": "Crawley, WA, Australia",
+        "major1": "Computer Science, B.Sc",
+        "major2": "Data Science, B.Sc",
         "coursework": [
             {
                 "title": "Object-oriented Programming and Software Engineering",
@@ -100,6 +102,70 @@
                 "tags": [
                     "Web Development",
                     ""
+                ]
+            }
+        ]
+    },
+    {
+        "name": "Rossmoyne Senior High School",
+        "start": 2010,
+        "end": 2014,
+        "location": "Bull Creek, WA, Australia",
+        "major1": "",
+        "major2": "",
+        "tags": [
+            "Maths",
+            "Physics",
+            "Chemistry",
+            "IT"
+        ],
+        "coursework": [
+            {
+                "title": "Mathematics",
+                "code": "MAT 3C/3D",
+                "tags": [
+                    "Maths"
+                ]
+            },
+            {
+                "title": "Mathematics Specialist",
+                "code": "MAS 3C/3D",
+                "tags": [
+                    "Maths"
+                ]
+            },
+            {
+                "title": "Physics",
+                "code": "PHY 3A/3B",
+                "tags": [
+                    "Science",
+                    "Physics"
+                ]
+            },
+            {
+                "title": "Chemistry",
+                "code": "CHE 3A/3B",
+                "tags": [
+                    "Science",
+                    "Chemistry"
+                ]
+            },
+            {
+                "title": "Applied Information Technology",
+                "code": "AIT 3A/3B",
+                "tags": [
+                    "HTML5",
+                    "CSS",
+                    "JavaScript"
+                ]
+            },
+            {
+                "title": "English",
+                "code": "ENG 2C/2D",
+                "tags": [
+                    "English",
+                    "Writing",
+                    "Essays"
                 ]
             }
         ]

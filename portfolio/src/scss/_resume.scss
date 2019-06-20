@@ -1,0 +1,117 @@
+.avatar-container {
+    width: 200px;
+    height: 200px;
+    margin: auto;
+
+    img {
+        border: 1px solid #d8d8d8;
+        box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
+        border-radius: 100%;
+        width: 100%;
+        height: auto;
+    }
+}
+
+.resume-page {
+    padding: 15px;
+    background-color: whitesmoke;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.border-box-shadow {
+    border: 1px solid #d8d8d8;
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
+    margin: 5px;
+    padding: 10px;
+}
+
+h1.res-header {
+    font-size: 32px;
+    color: rgb(59, 78, 78);
+}
+
+.resume-section {
+    color: #5a5a5a;
+
+    h1.res-name {
+        font-size: 55px;
+        color: #333333;
+    }
+
+    h1.res-title {
+        font-size: 20px;
+    }
+
+    h1.res-header {
+        font-size: 32px;
+    }
+
+    p.res-bio {
+        margin-left: 10px;
+    }
+
+    h1.resume-header {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: rgb(59, 78, 78);
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-left: 10px;
+    }
+}
+
+.school {
+    margin: 5px;
+    border: 1px solid #d8d8d8;
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
+    padding: 20px 40px 20px 40px !important;
+
+    .school-name {
+        color: #363636;
+        font-size: 22px;
+        text-align: left;
+    }
+
+    .school-dates {
+        color: #363636;
+        font-size: 22px;
+        font-style: initial;
+        text-align: right;
+    }
+    
+    .school-major {
+        color: #363636;
+        font-size: 22px;
+        font-style: initial;
+        text-align: left;
+    }
+
+    .school-location {
+        color: #363636;
+        font-size: 22px;
+        font-style: initial;
+        text-align: right;
+    }
+
+    ul.course-work-list {
+        list-style: circle;
+        margin-left: 10px;
+    }
+
+    .course-code {
+        color: #b9b9b9;
+
+        &::before {
+            content: " (";
+        }
+
+        &::after {
+            content: ")";
+        }
+    }
+}
