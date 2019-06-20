@@ -158,6 +158,7 @@ class Resume extends React.Component {
     }
 
     render() {
+        let throbber = null;
         let downloadButton = (
             <Button id="download-pdf-button" className="download-button" onClick={() => { this.downloadPDF(this) }}>
                 <img style={{
@@ -177,6 +178,11 @@ class Resume extends React.Component {
                     View an up to date version at <a href="https://www.tim-ings.com/resume">https://tim-ings.com/resume</a>
                 </p>
                 </>);
+            throbber = (
+                <div className="throbber-container">
+                    <img className="throbber" src="img/throbber.gif" alt="print to pdf throbber"/>
+                </div>
+            );
         }
 
         return (
@@ -192,6 +198,7 @@ class Resume extends React.Component {
                     Tim's Résumé
                 </h1>
             </div>
+            {throbber}
             <Container id="resume-print-parent" className={"resume-page " + (this.state.renderForPrint ? "print-colors" : "")}>
                 {downloadButton}
                 <Row>

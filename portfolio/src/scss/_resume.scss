@@ -31,6 +31,23 @@ h1.res-header {
     color: rgb(59, 78, 78);
 }
 
+.throbber-container {
+    position: fixed;
+    width: 100vw;
+    height: 100vh;
+    background-color: rgba(0,0,0,0.5);
+    z-index: 5000;
+    top: 0;
+    left: 0;
+    display: flex;
+
+    .throbber {
+        //filter: grayscale(100%);
+        margin: auto;
+        display: block;
+    }
+}
+
 .resume-section {
     color: #5a5a5a;
 
