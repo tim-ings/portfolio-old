@@ -54,7 +54,8 @@
         "category": "wow-addon",
         "description": "ElvUI Better Talent Frame is a user interface AddOn for World of Warcraft. It is an extension of the popular AddOn ElvUI. This AddOn improves the functionality of the talent frame by adding player created profiles and allowing the player to see his selected talents for his inactive specialisations.",
         "tech": [
-            "Lua"
+            "Lua",
+            "Wow"
         ],
         "curse_url": "https://www.curseforge.com/wow/addons/elvui_bettertalentframe",
         "curse_downloads": "39,730",
@@ -66,24 +67,12 @@
         "category": "wow-addon",
         "description": "Arwic Alt Manager is a user interface AddOn for World of Warcraft. It stores useful data about every character on a player's account and displays it in a table.",
         "tech": [
-            "Lua"
+            "Lua",
+            "Wow"
         ],
         "curse_url": "https://www.curseforge.com/wow/addons/arwicaltmanager",
         "curse_downloads": "2,038",
         "header_img_url": "img/headers/ArwicAltManager.png"
-    },
-    {
-        "name": "Wow Discord Rich Presence",
-        "slug": "WowDiscordRichPresence",
-        "category": "wow-addon",
-        "description": "Wow Discord Rich Presence is a python script and a World of Warcrtaft AddOn that work together to set a discord users current activity to what they are doing in World of Warcraft. The AddOn gathers data from the game and displays it to the python script, which updates the users discord presence.",
-        "tech": [
-            "Lua",
-            "Python",
-            "Discord"
-        ],
-        "header_img_url": "img/headers/DiscordRichPres.png",
-        "hide_download": true
     },
     {
         "name": "Simc Dungeon Jorunal",
@@ -91,7 +80,8 @@
         "category": "wow-addon",
         "description": "Simc Dungeon Jorunal is a user interface AddOn for World of Warcraft. It provides a function to generate simulationcraft input based on boss loot tables found in the dungeon journal. The user can take this output and input it into simulationcraft, which is a program that tells you what gear will allow your character to do the most damage.",
         "tech": [
-            "Lua"
+            "Lua",
+            "Wow"
         ],
         "curse_url": "https://www.curseforge.com/wow/addons/simcdj",
         "curse_downloads": "1,111",
@@ -103,9 +93,24 @@
         "category": "wow-addon",
         "description": "Town of Darkshire is a user interface AddOn for World of Warcraft. It is a game based on Town of Salem that runs inside of world of warcraft.",
         "tech": [
-            "Lua"
+            "Lua",
+            "Wow"
         ],
         "header_img_url": "img/headers/TownOfDarkshire.png",
+        "hide_download": true
+    },
+    {
+        "name": "Wow Discord Rich Presence",
+        "slug": "WowDiscordRichPresence",
+        "category": "wow-addon",
+        "description": "Wow Discord Rich Presence is a python script and a World of Warcrtaft AddOn that work together to set a discord users current activity to what they are doing in World of Warcraft. The AddOn gathers data from the game and displays it to the python script, which updates the users discord presence.",
+        "tech": [
+            "Lua",
+            "Wow",
+            "Python",
+            "Discord"
+        ],
+        "header_img_url": "img/headers/DiscordRichPres.png",
         "hide_download": true
     },
     {
@@ -114,7 +119,8 @@
         "category": "wow-addon",
         "description": "ElvUI Recount Inherit Global Fade is a user interface AddOn for World of Warcraft. It is an extension of the popular AddOn ElvUI. It is a small AddOn that causes another AddOn, recount, to respect the interface fading feature provided by the AddOn ElvUI.",
         "tech": [
-            "Lua"
+            "Lua",
+            "Wow"
         ],
         "curse_url": "https://www.curseforge.com/wow/addons/elvui_recountigf",
         "curse_downloads": "33,280",
@@ -126,7 +132,7 @@
         "category": "wow-addon",
         "description": "Pet Battle Scripts is a collection of scripts used in the World of Warcraft AddOn tdPetBattleScript. These scripts allow the automation of pet battles (similar to pokemon) within world of warcraft.",
         "tech": [
-            "Lua"
+            "Wow"
         ],
         "header_img_url": "img/headers/PetBattleScript.png",
         "hide_download": true
