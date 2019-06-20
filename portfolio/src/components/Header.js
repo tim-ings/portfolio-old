@@ -10,15 +10,22 @@ class HeaderItem extends React.Component {
     }
 
     render() {
+        let innerLink = (
+            <div className="hover-typewriter-container" style={{maxWidth: '200px', minWidth: '150px'}}>
+                <div className="hover-typewriter">
+                    {this.props.info.title}
+                </div>
+            </div>
+        );
+        let link = (<Link to={this.props.info.url} className="nav-link">{innerLink}</Link>);
+        if (this.props.info.useATag) {
+            // <Link> and parent bootstrap tags do not/make it hard support external sites like guthub, so use <a> and JS onclick to navigate to the url
+            link = (<a href={this.props.info.url} onClick={`window.open(${this.props.info.url})`} className="nav-link">{innerLink}</a>);
+        }
+
         return (
             <Nav.Link>
-                <Link to={this.props.info.url} className="nav-link">
-                    <div className="hover-typewriter-container" style={{width: 150 + 'px'}}>
-                        <div className="hover-typewriter">
-                            {this.props.info.title}
-                        </div>
-                    </div>
-                </Link>
+                {link}
             </Nav.Link>
         )
     }
@@ -47,7 +54,8 @@ class Header extends React.Component {
             {
                 title: "GitHub",
                 url: "https://github.com/tim-ings",
-                side: "left"
+                side: "left",
+                useATag: true
             },
             {
                 title: "About",
