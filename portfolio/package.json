@@ -2,7 +2,7 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://tim-ings.github.io/tim-ings",
+  "homepage":"https://tim-ings.github.io",
   "dependencies": {
     "bootstrap": "^4.3.1",
     "bootstrap-react": "^0.3.1",
