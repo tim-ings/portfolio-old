@@ -38,21 +38,21 @@ class Home extends React.Component {
                     tim-ings.com
                 </h1>
             </div>
-            <Container className="resume-page">
+            <Container className="home-page">
                 <Row>
                     <Col md={3}>
-                        <div className="resume-section border-box-shadow">
-                            <div className="resume-section">
+                        <div className="home-section dark-border-box-shadow">
+                            <div className="home-section">
                                 <div className="avatar-container">
                                     <img src="img/avatar.png" alt=""></img>
                                 </div>
                             </div>
                             <div>
-                                <h1 className="resume-header">Profile</h1>
+                                <h1 className="home-header">Profile</h1>
                                 <p className="res-bio">
                                     {ResumeData.bio}
                                 </p>
-                                <h1 className="resume-header">Contact</h1>
+                                <h1 className="home-header">Contact</h1>
                                 <ul>
                                     <li>Phone: {ResumeData.contacts.phone}</li>
                                     <li>Email: <a href={`mailto:${ResumeData.contacts.email}`}>{ResumeData.contacts.email}</a></li>
@@ -64,14 +64,14 @@ class Home extends React.Component {
                         </div>
                     </Col>
                     <Col md={5} style={{padding:'0'}}>
-                        <div className="resume-section border-box-shadow" style={{ textAlign: 'center' }}>
+                        <div className="home-section dark-border-box-shadow" style={{ textAlign: 'center' }}>
                             <h3>Random Project</h3>
                             <Link to="/portfolio" style={{paddingBottom: "20px"}}>View more in my portfolio</Link>
-                            <Project light data={ProjectData[projectIndex]} />
+                            <Project data={ProjectData[projectIndex]} />
                         </div>
                     </Col>
                     <Col md={4}>
-                        <div className="github-activity-container">
+                        <div className="github-activity-container dark-border-box-shadow">
                             <GitHubContribs />
                         </div>
                     </Col>

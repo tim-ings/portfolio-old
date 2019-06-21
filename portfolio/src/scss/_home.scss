@@ -1,0 +1,63 @@
+.portfolio-header {
+    margin-bottom: 50px;
+
+    .code {
+        font-family: Consolas, monaco, monospace;
+        color: $col-text-sec;
+        white-space: nowrap;
+    }
+    h1 {
+        color: $col-text-pri;
+        text-align: center;
+    }
+    h2 {
+        color: $col-text-pri;
+        text-align: center;
+    }
+    p {
+        color: $col-text-sec;
+        max-width: 600px;
+        text-align: center;
+        margin: 0 auto;
+    }
+}
+
+p.card-text {
+    color: #b4b4b4;
+}
+
+.dark-border-box-shadow {
+    border: 1px solid #2c2c2c;
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
+    margin: 5px;
+    padding: 10px;
+    background-color: #343435;
+}
+
+.home-page {
+    padding: 15px;
+    background-color: #282829;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+}
+
+.home-section {
+    color: #b4b4b4;
+
+    p.res-bio {
+        margin-left: 10px;
+    }
+
+    h1.home-header {
+        font-size: 20px;
+        text-transform: uppercase;
+        color: #b4b4b4;
+    }
+
+    ul {
+        list-style-type: none;
+        margin: 0;
+        padding: 0;
+        margin-left: 10px;
+    }
+}
