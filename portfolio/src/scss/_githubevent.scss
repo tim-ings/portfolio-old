@@ -1,0 +1,44 @@
+$col-text-minor: #868686;
+
+.event-container {
+    a.no-dec {
+        text-decoration: none;
+    }
+    //border: 1px solid red;
+
+    .event-title {
+        font-size: 18px;
+    }
+
+    .event-issue-number {
+        color: $col-text-minor;
+        margin-right: 5px;
+    }
+
+    .event-comment-container {
+        margin-left: 20px;
+
+        .event-comment-body {
+        }
+    }
+
+    .event-commit-container {
+        display: block;
+        margin-left: 20px;
+
+        .event-commit-list {
+            list-style: none;
+
+            .event-commit-sha {
+                color: $col-text-minor;
+                margin-right: 5px;
+            }
+        }
+    }
+
+    .event-issue-container {
+        display: block;
+        margin-left: 20px;
+
+    }
+}

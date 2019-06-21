@@ -2,8 +2,9 @@
   "name": "portfolio",
   "version": "0.1.0",
   "private": true,
-  "homepage":"https://tim-ings.com",
+  "homepage": "https://tim-ings.com",
   "dependencies": {
+    "@octokit/rest": "^16.28.2",
     "bootstrap": "^4.3.1",
     "bootstrap-react": "^0.3.1",
     "gh-pages": "^2.0.1",
