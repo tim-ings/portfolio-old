@@ -1,5 +1,4 @@
 import React from 'react';
-import {__DEV__} from 'react';
 import ResumeData from '../data/resume.json';
 import Octokit from "@octokit/rest";
 import Container from 'react-bootstrap/Container';
@@ -103,15 +102,11 @@ class GitHubEventList extends React.Component {
             }
             activityTags_commit.push(
                 <li key={i}>
-                    <a 
-                    href="javascript:;" 
-                    role="button" 
+                    <button
                     onClick={() => {document.querySelector(`#commits-list-repo-${repo.id}`).classList.toggle("hidden")}}
                     className="dropdown">
-                        {commit_uniqueRepos[i].name}
-                    </a> <a href={`https://github.com/${repo.name}/commits?author=${ResumeData.contacts.github}`}>
-                        {commit_repoCommitCounts[commit_uniqueRepos[i].id]} commits
-                    </a>
+                        {commit_uniqueRepos[i].name} {commit_repoCommitCounts[commit_uniqueRepos[i].id]} commits
+                    </button>
                     <ul id={`commits-list-repo-${repo.id}`} className="hidden">
                         {commitTags}
                     </ul>
@@ -148,13 +143,11 @@ class GitHubEventList extends React.Component {
             }
             activityTags_issuesOpened.push(
                 <li key={i}>
-                    <a 
-                    href="javascript:;" 
-                    role="button" 
+                    <button 
                     onClick={() => {document.querySelector(`#issue-opened-list-repo-${repo.id}`).classList.toggle("hidden")}}
                     className="dropdown">
                         {repo.name}
-                    </a>
+                    </button>
                     <ul id={`issue-opened-list-repo-${repo.id}`} className="hidden">
                         {issueTags}
                     </ul>
@@ -180,12 +173,11 @@ class GitHubEventList extends React.Component {
             }
             activityTags_issuesClosed.push(
                 <li key={i}>
-                    <a href="javascript:;" 
-                    role="button" 
+                    <button
                     onClick={() => {document.querySelector(`#issue-closed-list-repo-${repo.id}`).classList.toggle("hidden")}}
                     className="dropdown">
                         {repo.name}
-                    </a>
+                    </button>
                     <ul id={`issue-closed-list-repo-${repo.id}`} className="hidden">
                         {issueTags}
                     </ul>
@@ -216,13 +208,11 @@ class GitHubEventList extends React.Component {
             }
             activityTags_comments.push(
                 <li key={i}>
-                    <a 
-                    href="javascript:;" 
-                    role="button" 
+                    <button 
                     onClick={() => {document.querySelector(`#comments-repo-${repo.id}`).classList.toggle("hidden")}}
                     className="dropdown">
                         {repo.name}
-                    </a>
+                    </button>
                     <ul id={`comments-repo-${repo.id}`} className="hidden">
                         {commentTags}
                     </ul>
@@ -374,7 +364,7 @@ class GitHubContribs extends React.Component {
 
         return (
             <Container className="contrib-container">
-                <h1>GitHub Activity</h1>
+            <h1>GitHub Activity</h1>
                 {monthTags}
             </Container>
         )

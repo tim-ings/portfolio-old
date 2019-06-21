@@ -2,11 +2,8 @@ import React from 'react';
 import ProjectData from '../data/projects.json';
 import Tabs from 'react-bootstrap/Tabs';
 import Tab from 'react-bootstrap/Tab';
-import Card from 'react-bootstrap/Card';
-import Button from 'react-bootstrap/Button';
 import CardColumns from 'react-bootstrap/CardColumns';
 import Container from 'react-bootstrap/Container';
-import {Helmet} from "react-helmet";
 import Project from "./Project";
 
 class ProjectTabs extends React.Component {

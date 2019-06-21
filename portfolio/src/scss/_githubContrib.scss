@@ -4,7 +4,10 @@ $col-text-minor: #868686;
     ul {
         list-style: none;
         padding-left: 20px;
-        white-space: normal;
+        white-space: nowrap;
+        width: 270px;
+        overflow: hidden;
+        text-overflow: ellipsis;
     }
 
     color: rgb(59, 78, 78);
@@ -30,6 +33,13 @@ svg.octicon {
 
 .dropdown {
     text-decoration: none !important;
+    border: none;
+    background-color: inherit;
+    color: #007BFF;
+    padding: 0;
+    margin: 0;
+    text-align: left;
+    white-space: nowrap;
 }
 
 .github-activity-container {
