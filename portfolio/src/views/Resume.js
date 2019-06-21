@@ -1,5 +1,5 @@
 import React from 'react';
-import SchoolData from '../data/schools.json';
+import ResumeData from '../data/resume.json';
 import WorkData from '../data/work.json';
 import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
@@ -70,8 +70,8 @@ class SchoolList extends React.Component {
     render() {
 
         let schools = [];
-        for (let i = 0; i < SchoolData.length; i++) {
-            schools.push(<School key={i} data={SchoolData[i]} />);
+        for (let i = 0; i < ResumeData.schools.length; i++) {
+            schools.push(<School key={i} data={ResumeData.schools[i]} />);
         }
 
         return (
@@ -158,6 +158,7 @@ class Resume extends React.Component {
     }
 
     render() {
+        // handle rpint to pdf case
         let throbber = null;
         let downloadButton = (
             <Button id="download-pdf-button" className="download-button" onClick={() => { this.downloadPDF(this) }}>
@@ -185,6 +186,17 @@ class Resume extends React.Component {
             );
         }
 
+        let hobbies = [];
+        for (let i = 0; i < ResumeData.hobbies.length; i++) {
+            hobbies.push(<li key={i}>{ResumeData.hobbies[i]}</li>);
+        }
+
+        let titles = [];
+        for (let i = 0; i < ResumeData.titles.length; i++) {
+            titles.push(<h1 className="res-title">{ResumeData.titles[i]}</h1>);
+        }
+
+
         return (
             <>
             <Helmet>
@@ -211,34 +223,26 @@ class Resume extends React.Component {
                         <div className="resume-section border-box-shadow">
                             <h1 className="resume-header">Profile</h1>
                             <p className="res-bio">
-                                Tim Ings is a West Australian Computer Scientist. Tim grew up in Rossmoyne, WA and graduated Rossymone Senior High School in 2014 before attending the University of Western Australia.
+                                {ResumeData.bio}
                             </p>
                             <h1 className="resume-header">Contact</h1>
                             <ul>
-                                <li>Phone: 0406 840 009</li>
-                                <li>Email: <a href="mailto:tim@tim-ings.com">tim@tim-ings.com</a></li>
-                                <li>Website: <a href="https://tim-ings.com">tim-ings.com</a></li>
-                                <li>GitHub: <a href="https://github.com/tim-ings">github.com/tim-ings</a></li>
+                                <li>Phone: {ResumeData.contacts.phone}</li>
+                                <li>Email: <a href={`mailto:${ResumeData.contacts.email}`}>{ResumeData.contacts.email}</a></li>
+                                <li>Website: <a href={`https://${ResumeData.contacts.website}`}>{ResumeData.contacts.website}</a></li>
+                                <li>GitHub: <a href={`https://github.com/${ResumeData.contacts.github}`}>github.com/{ResumeData.contacts.github}</a></li>
                             </ul>
                             <br />
                             <h1 className="resume-header">Hobbies</h1>
                             <ul>
-                                <li>Web Development</li>
-                                <li>Programming</li>
-                                <li>Game Development</li>
-                                <li>Game Modding</li>
-                                <li>PC Building</li>
-                                <li>Cars/Motor Sport</li>
-                                <li>Gym/Weight Lifting</li>
-                                <li>Music</li>
+                                {hobbies}
                             </ul>
                         </div>
                     </Col>
                     <Col xs={12} md={9}>
                         <div className="resume-section">
-                            <h1 className="res-name">Tim Ings</h1>
-                            <h1 className="res-title">Bachelor of Computer Science</h1>
-                            <h1 className="res-title">Bachelor of Data Science</h1>
+                            <h1 className="res-name">{ResumeData.name}</h1>
+                            {titles}
                         </div>
                         <div className="resume-section">
                             <h1 className="res-header">Education</h1>
