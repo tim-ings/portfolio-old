@@ -4,7 +4,6 @@ import Container from 'react-bootstrap/Container';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 import {Helmet} from "react-helmet";
-import Button from "react-bootstrap/Button";
 import GitHubContribs from '../components/GitHubContribs.js';
 
 class Home extends React.Component {
@@ -54,11 +53,17 @@ class Home extends React.Component {
                             </ul>
                         </div>
                     </Col>
-                    <Col xs={12} md={9}>
+                    <Col xs={12} md={8}>
                         <div className="resume-section">
                             <h1 className="res-name">{ResumeData.name}</h1>
-                            <img src="http://ghchart.rshah.org/tim-ings" alt="tim-ings's Github chart" />
                             <GitHubContribs />
+                        </div>
+                    </Col>
+                    <Col md={1}>
+                        <div className="resume-section">
+                            {/* <img style={{
+                                    transform: 'rotate(90deg)',
+                                }} src={`http://ghchart.rshah.org/${ResumeData.contacts.github}`} alt="tim-ings's Github chart" /> */}
                         </div>
                     </Col>
                 </Row>

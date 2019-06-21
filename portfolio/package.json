@@ -5,6 +5,7 @@
   "homepage": "https://tim-ings.com",
   "dependencies": {
     "@octokit/rest": "^16.28.2",
+    "@primer/octicons-react": "^9.1.1",
     "bootstrap": "^4.3.1",
     "bootstrap-react": "^0.3.1",
     "gh-pages": "^2.0.1",
