@@ -1,7 +1,7 @@
 .nav-item.nav-link {
     background-color: $col-background !important;
     color: $col-text-pri !important;
-    border-color: $col-border !important;
+    border-color: rgb(29, 29, 29) !important;
 
     &:hover {
         background-color: lighten($col-background, 30%) !important;
@@ -11,7 +11,7 @@
 .nav-item.nav-link.active {
     background-color: lighten($col-background, 20%) !important;
     color: $col-text-pri !important;
-    border-color: $col-border !important;
+    border-color: rgb(29, 29, 29) !important;
 }
 
 .nav.nav-tabs {
@@ -54,7 +54,7 @@
 }
 
 .portfolio-tab {
-    border: 1px solid $col-border;
+    border: 1px solid #232324;
     background-color: lighten($col-background, 1%);
     padding: 20px;
 
