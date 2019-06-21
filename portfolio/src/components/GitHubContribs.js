@@ -307,17 +307,6 @@ class GitHubContribs extends React.Component {
             return
         }
 
-        // get all our repos
-        if (this.state.githubEvents)
-        gh.repos.listForUser({
-            username: ResumeData.contacts.github
-        }).then((res) => {
-            console.log("Got repos.listForUser from github:", res);
-            this.setState({
-                githubRepos: res.data
-            })
-        });
-
         // get all our activity
         gh.activity.listEventsForUser({
             username: ResumeData.contacts.github
@@ -326,10 +315,24 @@ class GitHubContribs extends React.Component {
             this.setState({
                 githubEvents: res.data
             })
+        }).catch((err) => {
+            console.log("GitHub is rate limiting this IP address");
+            this.setState({
+                githubEvents: []
+            })
         });
     }
 
     render() {
+        if (this.state.githubEvents.length === 0) {
+            return (
+                <Container className="contrib-container">
+                    <h1>GitHub Activity</h1>
+                    <p>Unable to fetch data from GitHub at this time</p>
+                </Container>
+            )
+        }
+
         let dateNow = new Date();
         let dateLastYear = dateNow.setYear(dateNow.getYear() - 1);
         let months = {};

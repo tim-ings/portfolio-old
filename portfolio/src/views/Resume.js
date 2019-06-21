@@ -8,153 +8,8 @@ import {Helmet} from "react-helmet";
 import Button from "react-bootstrap/Button";
 import jsPDF from "jspdf";
 import html2canvas from "html2canvas";
-
-class School extends React.Component {
-    
-    constructor(props) {
-        super();
-    }
-
-    render() {
-        let courseWork = [];
-        for (let i = 0; i < this.props.data.coursework.length; i++) {
-            let cw = this.props.data.coursework[i];
-            courseWork.push(
-                <li key={i} className="course-work-itme">
-                    {cw.title}
-                    <span className="course-code">{cw.code}</span>
-                </li>
-            );
-        }
-
-        let tags = new Set();
-        // gather all tags
-        for (let i = 0; i < this.props.data.coursework.length; i++) {
-            for (let j = 0; j < this.props.data.coursework[i].tags.length; j++) {
-                tags.add(this.props.data.coursework[i].tags[j]);
-            }
-        }
-        tags = Array.from(tags);
-        let techTags = [];
-        for (let i = 0; i < tags.length; i++) {
-            techTags.push(
-                <span key={i} className="tech-tag tech-tag-light">
-                    <span className={`tech-tag-icon tech-tag-${tags[i].toLowerCase().replace(/\s/g, '')}`}></span>
-                    {tags[i]}
-                </span>);
-        }
-
-        return (
-            <Container className="school">
-                <Row>
-                    <Col>
-                        <h1 className="school-name">{this.props.data.name}</h1>
-                    </Col>
-                    <Col>
-                        <h1 className="school-dates">{this.props.data.start} - {this.props.data.end}</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <h1 className="school-major">{this.props.data.major1}</h1>
-                    </Col>
-                    <Col>
-                        <h1 className="school-location">{this.props.data.location}</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <h1 className="school-major">{this.props.data.major2}</h1>
-                    </Col>
-                    <Col></Col>
-                </Row>
-                <br />
-                <p>Coursework:</p>
-                <ul className="course-work-list">
-                    {courseWork}
-                </ul>
-                {techTags}
-            </Container>
-        )
-    }
-}
-
-class SchoolList extends React.Component {
-
-    constructor(props) {
-        super();
-    }
-
-    render() {
-
-        let schools = [];
-        for (let i = 0; i < ResumeData.schools.length; i++) {
-            schools.push(<School key={i} data={ResumeData.schools[i]} />);
-        }
-
-        return (
-            <div>
-                {schools}
-            </div>
-        );
-    }
-}
-
-class Work extends React.Component {
-    
-    constructor(props) {
-        super();
-    }
-
-    render() {
-        return (
-            <Container className="school">
-                <Row>
-                    <Col>
-                        <h1 className="school-name">{this.props.data.name}</h1>
-                    </Col>
-                    <Col>
-                        <h1 className="school-dates">{this.props.data.start} - {this.props.data.end}</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                    </Col>
-                    <Col>
-                        <h1 className="school-location">{this.props.data.location}</h1>
-                    </Col>
-                </Row>
-                <Row>
-                    <Col>
-                        <p className="work-desc">{this.props.data.description}</p>
-                    </Col>
-                </Row>
-            </Container>
-        )
-    }
-}
-
-class WorkList extends React.Component {
-
-    constructor(props) {
-        super();
-    }
-
-    render() {
-
-        let works = [];
-        for (let i = 0; i < WorkData.length; i++) {
-            works.push(<Work key={i} data={WorkData[i]} />);
-        }
-
-        return (
-            <div>
-                {works}
-            </div>
-        );
-    }
-}
-
+import School from "../components/School";
+import Work from "../components/Work";
 
 class Resume extends React.Component {
     
@@ -214,6 +69,15 @@ class Resume extends React.Component {
             titles.push(<h1 key={i} className="res-title">{ResumeData.titles[i]}</h1>);
         }
 
+        let schools = [];
+        for (let i = 0; i < ResumeData.schools.length; i++) {
+            schools.push(<School key={i} data={ResumeData.schools[i]} />);
+        }
+
+        let works = [];
+        for (let i = 0; i < WorkData.length; i++) {
+            works.push(<Work key={i} data={WorkData[i]} />);
+        }
 
         return (
             <>
@@ -264,11 +128,11 @@ class Resume extends React.Component {
                         </div>
                         <div className="resume-section">
                             <h1 className="res-header">Education</h1>
-                            <SchoolList />
+                            {schools}
                         </div>
                         <div className="resume-section">
                             <h1 className="res-header">Work Experience</h1>
-                            <WorkList />
+                            {works}
                         </div>
                     </Col>
                 </Row>

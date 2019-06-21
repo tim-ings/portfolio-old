@@ -2,8 +2,9 @@
     {
         "name": "Dominion",
         "slug": "Dominion",
+        "homepage": true,
         "category": "game",
-        "description": "Dominion is a multiplayer 4X grand stratergy game based on Civilization 5 and written in C# using XNA/MonoGame. Dominion's engine contains a custom C# WinForms like library that it uses for its user interface. A graphical designer is used to design forms for the game. The game is content driven so users can add their own mod packs generated with the included ArwicXmlEditor tool. Every game board is procedurally generated and units move with A* pathfinding.",
+        "description": "Dominion is a multiplayer 4X grand stratergy game based on Civilization 5 and written in C# using XNA/MonoGame. Dominion's engine contains a custom C# WinForms like library that it uses for its user interface. A custom graphical designer is used to design forms for the game. The game is content driven so users can add their own mod packs generated with the included ArwicXmlEditor tool. Every game board is procedurally generated and units move with A* pathfinding.",
         "tech": [
             "CSharp",
             "Xna",
@@ -14,6 +15,7 @@
     {
         "name": "Run",
         "slug": "Run",
+        "homepage": false,
         "category": "game",
         "description": "Run is an infinite runner style game developed in unity. It is based on Rayman Jungle Run for iOS. Press any key to make the player jump off the ground or wall he is stuck to.",
         "tech": [
@@ -26,6 +28,7 @@
     {
         "name": "Pong",
         "slug": "Pong",
+        "homepage": false,
         "category": "game",
         "description": "The classic game pong, implemented in an HTML5 canvas.",
         "tech": [
@@ -38,6 +41,7 @@
     {
         "name": "Infinite Frontier",
         "slug": "InfiniteFrontier",
+        "homepage": true,
         "category": "game",
         "tech": [
             "CSharp",
@@ -45,14 +49,16 @@
             "MonoGame"
         ],
         "description": "Infinite Frontier is a space themed grand stratergy game. It is built on an older version of Dominion's engine.",
+        "description": "Infinite Frontier is a space themed 4X grand stratergy game written in C# using XNA/MonoGame. It is built on an older version of Dominion's engine. Players win the game by wiping out their opponents. Planets have different atmospheres, resources, and native peoples.",
         "header_img_url": "img/headers/InfiniteFrontier.png"
     },
 
     {
         "name": "ElvUI Better Talent Frame",
         "slug": "ElvUI_BetterTalentFrame",
+        "homepage": true,
         "category": "wow-addon",
-        "description": "ElvUI Better Talent Frame is a user interface AddOn for World of Warcraft. It is an extension of the popular AddOn ElvUI. This AddOn improves the functionality of the talent frame by adding player created profiles and allowing the player to see his selected talents for his inactive specialisations.",
+        "description": "ElvUI Better Talent Frame is a user interface AddOn for World of Warcraft. It is an extension of the popular AddOn ElvUI. This AddOn improves the functionality of the talent frame by adding player created profiles and allowing the player to see his selected talents for his inactive specialisations. All World of Warcraft AddOns are built with Lua.",
         "tech": [
             "Lua",
             "WoW"
@@ -64,6 +70,7 @@
     {
         "name": "Arwic Alt Manager",
         "slug": "ArwicAltManager",
+        "homepage": false,
         "category": "wow-addon",
         "description": "Arwic Alt Manager is a user interface AddOn for World of Warcraft. It stores useful data about every character on a player's account and displays it in a table.",
         "tech": [
@@ -77,6 +84,7 @@
     {
         "name": "Simc Dungeon Jorunal",
         "slug": "simcdungeonjournal",
+        "homepage": false,
         "category": "wow-addon",
         "description": "Simc Dungeon Jorunal is a user interface AddOn for World of Warcraft. It provides a function to generate simulationcraft input based on boss loot tables found in the dungeon journal. The user can take this output and input it into simulationcraft, which is a program that tells you what gear will allow your character to do the most damage.",
         "tech": [
@@ -90,6 +98,7 @@
     {
         "name": "Town of Darkshire",
         "slug": "TownOfDarkshire",
+        "homepage": false,
         "category": "wow-addon",
         "description": "Town of Darkshire is a user interface AddOn for World of Warcraft. It is a game based on Town of Salem that runs inside of world of warcraft.",
         "tech": [
@@ -102,6 +111,7 @@
     {
         "name": "Wow Discord Rich Presence",
         "slug": "WowDiscordRichPresence",
+        "homepage": false,
         "category": "wow-addon",
         "description": "Wow Discord Rich Presence is a python script and a World of Warcrtaft AddOn that work together to set a discord users current activity to what they are doing in World of Warcraft. The AddOn gathers data from the game and displays it to the python script, which updates the users discord presence.",
         "tech": [
@@ -116,6 +126,7 @@
     {
         "name": "ElvUI Recount Recount Inherit Global Fade",
         "slug": "ElvUI_RecountIGF",
+        "homepage": false,
         "category": "wow-addon",
         "description": "ElvUI Recount Inherit Global Fade is a user interface AddOn for World of Warcraft. It is an extension of the popular AddOn ElvUI. It is a small AddOn that causes another AddOn, recount, to respect the interface fading feature provided by the AddOn ElvUI.",
         "tech": [
@@ -129,6 +140,7 @@
     {
         "name": "Pet Battle Scripts",
         "slug": "PetBattleScripts",
+        "homepage": false,
         "category": "wow-addon",
         "description": "Pet Battle Scripts is a collection of scripts used in the World of Warcraft AddOn tdPetBattleScript. These scripts allow the automation of pet battles (similar to pokemon) within world of warcraft.",
         "tech": [
@@ -141,8 +153,9 @@
     {
         "name": "Movie Rankings",
         "slug": "MovieRankings",
+        "homepage": true,
         "category": "website",
-        "description": "Movie Rankings is a website that allows users show off their favourite movies and create polls about them. Utilises Facebook OAuth2 for authentication.",
+        "description": "Movie Rankings is a website that allows users show off their favourite movies and create polls about them. Utilises Facebook OAuth2 for authentication. Built primarily with flask, jinja and bootstrap",
         "tech": [
             "Flask",
             "Python",
@@ -156,6 +169,7 @@
     {
         "name": "Bastion Droptimizer",
         "slug": "DroptimizerServer",
+        "homepage": true,
         "category": "website",
         "description": "Bastion Droptimizer is a website for World of Warcraft that aggregates the results of raidbots.com simulation reports. These reports are used to determine how much of an upgrade an item a boss drops is for a player. This website groups reports for every player in a raid team and enables leadership to make better decisions about how to distribute loot.",
         "tech": [
@@ -170,8 +184,9 @@
     {
         "name": "Portfolio Site",
         "slug": "tim-ings.com",
+        "homepage": false,
         "category": "website",
-        "description": "My personal portfolio site you are browsing right now.",
+        "description": "My personal portfolio site you are browsing right now. Built with react, bootstrap, and sass.",
         "tech": [
             "React",
             "JavaScript",
@@ -184,8 +199,9 @@
     {
         "name": "Gabr",
         "slug": "Gabr",
+        "homepage": true,
         "category": "website",
-        "description": "Gabr is a microblogging website based on twitter.",
+        "description": "Gabr is a microblogging website based on twitter. It is built with django, sass, and a little bit of bootstrap.",
         "tech": [
             "Django",
             "Python",
@@ -200,6 +216,7 @@
     {
         "name": "Oldschool Runescape World Ping",
         "slug": "OSRSWorldPing",
+        "homepage": false,
         "category": "website",
         "description": "Oldschool Runescape World Ping is a web utility that allows the user to check their ping to each runescape game server.",
         "tech": [
@@ -214,6 +231,7 @@
     {
         "name": "Attendance Report",
         "slug": "AttendanceReport",
+        "homepage": false,
         "category": "website",
         "description": "Attendance Report is a tool that generates a report showing how often players are late, leave early, or fail to attend World of Warcraft raids based on their presence in combat log data retrieved from warcraftlogs.com.",
         "tech": [
@@ -229,6 +247,7 @@
     {
         "name": "Web Server",
         "slug": "WebServer",
+        "homepage": false,
         "category": "program",
         "description": "Web Server is a basic http web server written in python.",
         "tech": [
@@ -239,6 +258,7 @@
     {
         "name": "CS Piano",
         "slug": "CSPiano",
+        "homepage": false,
         "category": "program",
         "description": "CSPiano is a simple music player that uses console beeps and its own file format. Pass a text file with music code in it as an argument and CSPiano will play it in console beeps.",
         "tech": [
@@ -250,6 +270,7 @@
     {
         "name": "Arwic Bot",
         "slug": "ArwicBot",
+        "homepage": false,
         "category": "chat-bot",
         "description": "ArwicBot is a modular bot for the chat app discord. Current modules include; user permissions, youtube music player, server administration, embeded messages, world of warcraft utilities, and fun hidden responses.",
         "tech": [
@@ -262,6 +283,7 @@
     {
         "name": "Needs More JPEG Bot",
         "slug": "NeedsMoreJPEGBot",
+        "homepage": false,
         "category": "chat-bot",
         "description": "Needs More JPEG Bot is a bot for reddit.com. It responds to commenters requests for a lower qaulity version of an image.",
         "tech": [

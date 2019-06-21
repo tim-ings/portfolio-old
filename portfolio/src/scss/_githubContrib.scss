@@ -1,7 +1,12 @@
 $col-text-minor: #868686;
 
 .contrib-container {
+    ul {
+        list-style: none;
+        padding-left: 20px;
+    }
 
+    color: rgb(59, 78, 78);
 }
 
 .hidden {
@@ -22,4 +27,14 @@ svg.octicon {
 
 .dropdown {
     text-decoration: none !important;
+}
+
+.github-activity-container {
+    overflow: auto;
+    max-height: 63vh;
+    height: 100%;
+    border: 1px solid #d8d8d8;
+    box-shadow: 1px 2px 2px 0px rgba(0,0,0,0.25);
+    margin: 5px;
+    padding: 10px 0 10px 0;
 }

@@ -62,11 +62,6 @@ class Header extends React.Component {
                 url: "https://github.com/tim-ings",
                 side: "left",
                 useATag: true
-            },
-            {
-                title: "About",
-                url: "/about",
-                side: "left"
             }
         ];
     }
@@ -78,7 +73,7 @@ class Header extends React.Component {
         }
 
         return (
-            <Navbar collapseOnSelect bg="dark" expand="lg" variant="dark" fixed="top">
+            <Navbar collapseOnSelect expand="lg" variant="dark" fixed="top">
                 <Navbar.Brand href="/">
                     <img
                         src="img/signature_light.png"
