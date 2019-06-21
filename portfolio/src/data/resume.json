@@ -90,7 +90,8 @@
                         "OpenGL",
                         "C",
                         "3D Graphics",
-                        "3D Animations"
+                        "3D Animations",
+                        "Cpp"
                     ]
                 },
                 {
@@ -106,7 +107,8 @@
                     "code": "CITS2401",
                     "tags": [
                         "Python",
-                        "Excel"
+                        "Excel",
+                        "Matlab"
                     ]
                 },
                 {
@@ -124,7 +126,11 @@
                     "code": "CITS3403",
                     "tags": [
                         "Web Development",
-                        ""
+                        "JavaScript",
+                        "HTML5",
+                        "CSS",
+                        "Python",
+                        "Bootstrap"
                     ]
                 }
             ]

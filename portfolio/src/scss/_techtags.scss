@@ -1,0 +1,160 @@
+$icon-dim: 20px;
+
+.tech-tag {
+    display: inline-block;
+    margin: 2px;
+    padding: 5px;
+    border: 1px solid lighten($col-border, 20%);
+    background-color: lighten($col-background, 5%);
+    color: $col-text-sec;
+    border-radius: 5px;
+}
+
+.tech-tag-light {
+    border: 1px solid #b9b9b9;
+    background-color: darken(whitesmoke, 5%);
+}
+
+.tech-tag-icon {
+    display: inline-block;
+    background-repeat: no-repeat;
+    background-size: $icon-dim;
+    width: $icon-dim;
+    height: $icon-dim;
+    transform: translateY(4px);
+    margin: 0 5px 0 5px;
+    border-radius: 5px;
+}
+
+.tech-tag-bootstrap {
+    background-image: url(img/tech/bootstrap.png);
+}
+.tech-tag-csharp {
+    background-image: url(img/tech/csharp.png);
+}
+.tech-tag-css {
+    background-image: url(img/tech/css.png);
+}
+.tech-tag-discord {
+    background-image: url(img/tech/discord.png);
+}
+.tech-tag-django {
+    background-image: url(img/tech/django.png);
+}
+.tech-tag-html5 {
+    background-image: url(img/tech/html5.png);
+}
+.tech-tag-javascript {
+    background-image: url(img/tech/javascript.png);
+}
+.tech-tag-lua {
+    background-image: url(img/tech/lua.png);
+}
+.tech-tag-monogame {
+    background-image: url(img/tech/monogame.png);
+}
+.tech-tag-nodejs {
+    background-image: url(img/tech/nodejs.png);
+}
+.tech-tag-python {
+    background-image: url(img/tech/python.png);
+}
+.tech-tag-react {
+    background-image: url(img/tech/react.png);
+}
+.tech-tag-reddit {
+    background-image: url(img/tech/reddit.png);
+}
+.tech-tag-sass {
+    background-image: url(img/tech/sass.png);
+}
+.tech-tag-unity {
+    background-image: url(img/tech/unity.png);
+}
+.tech-tag-wow {
+    background-image: url(img/tech/wow.png);
+}
+.tech-tag-xna {
+    background-image: url(img/tech/xna.png);
+}
+.tech-tag-flask {
+    background-image: url(img/tech/flask.png);
+}
+.tech-tag-runescape {
+    background-image: url(img/tech/osrs.png);
+}
+.tech-tag-java {
+    background-image: url(img/tech/java.png);
+}
+.tech-tag-engineering {
+    background-image: url(img/tech/engineering.png);
+}
+.tech-tag-database {
+    background-image: url(img/tech/database.png);
+}
+.tech-tag-mysql {
+    background-image: url(img/tech/mysql.png);
+}
+.tech-tag-c {
+    background-image: url(img/tech/c.png);
+}
+.tech-tag-datastructures {
+    background-image: url(img/tech/datastructures.png);
+}
+.tech-tag-networking {
+    background-image: url(img/tech/networking.png);
+}
+.tech-tag-opengl {
+    background-image: url(img/tech/opengl_sq.png);
+}
+.tech-tag-3dgraphics {
+    background-image: url(img/tech/3dgraphics.png);
+}
+.tech-tag-3danimations {
+    background-image: url(img/tech/3dgraphics.png);
+}
+.tech-tag-statistics {
+    background-image: url(img/tech/statistics.png);
+}
+.tech-tag-datascience {
+    background-image: url(img/tech/datastructures.png);
+}
+.tech-tag-excel {
+    background-image: url(img/tech/excel.png);
+}
+.tech-tag-sqlserver {
+    background-image: url(img/tech/sqlserver.png);
+}
+.tech-tag-datamining {
+    background-image: url(img/tech/datamining.png);
+}
+.tech-tag-webdevelopment {
+    background-image: url(img/tech/webdevelopment.png);
+}
+.tech-tag-maths {
+    background-image: url(img/tech/maths.png);
+}
+.tech-tag-science {
+    background-image: url(img/tech/chemistry.png);
+}
+.tech-tag-physics {
+    background-image: url(img/tech/chemistry.png);
+}
+.tech-tag-chemistry {
+    background-image: url(img/tech/chemistry.png);
+}
+.tech-tag-english {
+    background-image: url(img/tech/writing.png);
+}
+.tech-tag-writing {
+    background-image: url(img/tech/writing.png);
+}
+.tech-tag-essays {
+    background-image: url(img/tech/writing.png);
+}
+.tech-tag-cpp {
+    background-image: url(img/tech/cpp.png);
+}
+.tech-tag-matlab {
+    background-image: url(img/tech/matlab.png);
+}
