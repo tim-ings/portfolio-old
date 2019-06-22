@@ -115,7 +115,7 @@ class Resume extends React.Component {
                                 <li>GitHub: <a href={`https://github.com/${ResumeData.contacts.github}`}>github.com/{ResumeData.contacts.github}</a></li>
                             </ul>
                             <br />
-                            <h1 className="resume-header">Hobbies</h1>
+                            <h1 className="resume-header">Interests</h1>
                             <ul>
                                 {hobbies}
                             </ul>

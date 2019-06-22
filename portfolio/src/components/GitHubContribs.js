@@ -279,7 +279,8 @@ class GitHubContribs extends React.Component {
         super();
         this.state = {
             githubEvents: [],
-            githubRepos: []
+            failedFetch: false,
+            error: null
         }
     }
 
@@ -292,7 +293,8 @@ class GitHubContribs extends React.Component {
         if (window.location.hostname === "localhost") {
             console.warn("USING SAMPLE DATA:", TestEventData);
             this.setState({
-                githubEvents: TestEventData
+                githubEvents: TestEventData,
+                failedFetch: false
             });
             return
         }
@@ -303,24 +305,41 @@ class GitHubContribs extends React.Component {
         }).then((res) => {
             console.log("Got activity.listEventsForUser from github:", res);
             this.setState({
-                githubEvents: res.data
+                githubEvents: res.data,
+                failedFetch: false,
             })
         }).catch((err) => {
             console.log("GitHub is rate limiting this IP address");
             this.setState({
-                githubEvents: []
+                githubEvents: [],
+                failedFetch: true,
+                error: err
             })
         });
     }
 
     render() {
-        if (this.state.githubEvents.length === 0) {
+        // display error msg if github did not return any data
+        if (this.state.failedFetch) {
             return (
                 <Container className="contrib-container">
                     <h1>GitHub Activity</h1>
-                    <p>Unable to fetch data from GitHub at this time</p>
+                    <p style={{whiteSpace:'normal'}}>Unable to fetch data from GitHub at this time.</p>
+                    <p style={{whiteSpace:'normal'}}>GitHub may be rate limiting this IP address.</p>
                 </Container>
-            )
+            );
+        }
+        // display throbber while fetching data
+        if (this.state.githubEvents.length === 0 && !this.state.failedFetch) {
+            return (
+                <Container className="contrib-container">
+                    <h1>GitHub Activity</h1>
+                    <p style={{textAlign:'center'}}>Fetching activity data...</p>
+                    <div className="github-throbber-container">
+                        <img className="github-throbber" src="img/throbber.gif" alt="github fetch throbber"/>
+                    </div>
+                </Container>
+            );
         }
 
         let dateNow = new Date();
