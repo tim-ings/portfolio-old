@@ -91,13 +91,17 @@ class GitHubEventList extends React.Component {
             for (let j = 0; j < eventPushes.length; j++) {
                 let ghe = eventPushes[j];
                 for (let k = 0; k < ghe.payload.commits.length; k++) {
-                    commitTags.push(
-                        <li key={`${j}${k}`}>
-                            <Octicon icon={GitCommit} />
-                            <a href={`https://github.com/tim-ings/tim-ings.com/commit/${ghe.payload.commits[k].sha}`}>
-                                {ghe.payload.commits[k].message}
-                            </a>
-                        </li>);
+                    let commitRepoName = ghe.payload.commits[k].url.split("/");
+                    commitRepoName = `${commitRepoName[4]}/${commitRepoName[5]}`;
+                    if (commitRepoName === repo.name) {
+                        commitTags.push(
+                            <li key={`${j}${k}`}>
+                                <Octicon icon={GitCommit} />
+                                <a href={`https://github.com/tim-ings/tim-ings.com/commit/${ghe.payload.commits[k].sha}`}>
+                                    {ghe.payload.commits[k].message}
+                                </a>
+                            </li>);
+                    }
                 }
             }
             activityTags_commit.push(
@@ -132,14 +136,16 @@ class GitHubEventList extends React.Component {
             let issueTags = [];
             for (let j = 0; j < eventIssuesOpened.length; j++) {
                 let ghe = eventIssuesOpened[j];
-                issueTags.push(
-                    <li key={j}>
-                        <Octicon icon={IssueOpened} />
-                        <a href={ghe.payload.issue.html_url}>
-                            {ghe.payload.issue.title}
-                        </a>
-                    </li>
-                );
+                if (ghe.repo.id === repo.id) {
+                    issueTags.push(
+                        <li key={j}>
+                            <Octicon icon={IssueOpened} />
+                            <a href={ghe.payload.issue.html_url}>
+                                {ghe.payload.issue.title}
+                            </a>
+                        </li>
+                    );
+                }
             }
             activityTags_issuesOpened.push(
                 <li key={i}>
@@ -162,14 +168,16 @@ class GitHubEventList extends React.Component {
             let issueTags = [];
             for (let j = 0; j < eventIssuesClosed.length; j++) {
                 let ghe = eventIssuesClosed[j];
-                issueTags.push(
-                    <li key={j}>
-                        <Octicon icon={IssueClosed} />
-                        <a href={ghe.payload.issue.html_url}>
-                            {ghe.payload.issue.title}
-                        </a>
-                    </li>
-                );
+                if (ghe.repo.id === repo.id) {
+                    issueTags.push(
+                        <li key={j}>
+                            <Octicon icon={IssueClosed} />
+                            <a href={ghe.payload.issue.html_url}>
+                                {ghe.payload.issue.title}
+                            </a>
+                        </li>
+                    );
+                }
             }
             activityTags_issuesClosed.push(
                 <li key={i}>
@@ -192,19 +200,21 @@ class GitHubEventList extends React.Component {
             let commentTags = [];
             for (let j = 0; j < eventComments.length; j++) {
                 let ghe = eventComments[j];
-                commentTags.push(
-                    <li key={j}>
-                        <span className="event-title">
-                            Replied to issue <a href={ghe.payload.issue.html_url} className="no-dec">
-                                <span className="event-issue-number">#{ghe.payload.issue.number}</span>
-                            </a>
-                        </span>
-                        <div className="event-comment-container">
-                            <Octicon icon={Comment} />
-                            <span className="event-comment-body"><q>{ghe.payload.comment.body}</q></span>
-                        </div>
-                    </li>
-                );
+                if (ghe.repo.id === repo.id) {
+                    commentTags.push(
+                        <li key={j}>
+                            <span className="event-title">
+                                Replied to issue <a href={ghe.payload.issue.html_url} className="no-dec">
+                                    <span className="event-issue-number">#{ghe.payload.issue.number}</span>
+                                </a>
+                            </span>
+                            <div className="event-comment-container">
+                                <Octicon icon={Comment} />
+                                <span className="event-comment-body"><q>{ghe.payload.comment.body}</q></span>
+                            </div>
+                        </li>
+                    );
+                }
             }
             activityTags_comments.push(
                 <li key={i}>
