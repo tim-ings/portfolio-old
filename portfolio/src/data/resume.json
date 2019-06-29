@@ -1,8 +1,8 @@
 {
     "name": "Tim Ings",
     "titles": [
-        "Bachelor of Computer Science",
-        "Bachelor of Data Science"
+        "Bachelor of Computer Science (In Progress)",
+        "Bachelor of Data Science (In Progress)"
     ],
     "bio": "Tim Ings is a West Australian Computer Scientist. Tim grew up in Rossmoyne, WA and graduated Rossymone Senior High School in 2014 before attending the University of Western Australia.",
     "contacts": {
@@ -24,8 +24,8 @@
     "schools": [
         {
             "name": "University of Western Australia",
-            "start": 2015,
-            "end": 2017,
+            "start": "Currently Studying",
+            "end": "",
             "location": "Crawley, WA, Australia",
             "major1": "Computer Science, B.Sc",
             "major2": "Data Science, B.Sc",

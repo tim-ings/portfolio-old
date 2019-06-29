@@ -38,6 +38,11 @@ class School extends React.Component {
                 </span>);
         }
 
+        let dateLine = `${this.props.data.start} - ${this.props.data.end}`;
+        if (this.props.data.end === "") {
+            dateLine = `${this.props.data.start}`;
+        }
+
         return (
             <Container className="school">
                 <Row>
@@ -45,7 +50,7 @@ class School extends React.Component {
                         <h1 className="school-name">{this.props.data.name}</h1>
                     </Col>
                     <Col>
-                        <h1 className="school-dates">{this.props.data.start} - {this.props.data.end}</h1>
+                        <h1 className="school-dates">{dateLine}</h1>
                     </Col>
                 </Row>
                 <Row>

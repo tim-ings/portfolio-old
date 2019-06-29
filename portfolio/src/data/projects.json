@@ -48,7 +48,6 @@
             "Xna",
             "MonoGame"
         ],
-        "description": "Infinite Frontier is a space themed grand stratergy game. It is built on an older version of Dominion's engine.",
         "description": "Infinite Frontier is a space themed 4X grand stratergy game written in C# using XNA/MonoGame. It is built on an older version of Dominion's engine. Players win the game by wiping out their opponents. Planets have different atmospheres, resources, and native peoples.",
         "header_img_url": "img/headers/InfiniteFrontier.png"
     },
