@@ -34,14 +34,27 @@ class Resume extends React.Component {
         // handle rpint to pdf case
         let throbber = null;
         let downloadButton = (
-            <Button id="download-pdf-button" className="download-button" onClick={() => { this.downloadPDF(this) }}>
-                <img style={{
-                    height: '1rem', 
-                    marginRight: '5px', 
-                    transform: 'translateY(-2px)'
-                }} src="img/logos/download_light.png" alt="" />
-                Download as PDF
-            </Button>
+            <>
+                <Button href="/docs/tim-ings-resume.pdf" target="_blank" id="download-pdf-button" className="download-button">
+                    <img style={{
+                        height: '1rem', 
+                        marginRight: '5px',
+                        transform: 'translateY(-2px)'
+                    }} src="img/logos/download_light.png" alt="" />
+                    Download as PDF
+                </Button>
+                <Button href="/docs/tim-ings-resume.docx" target="_blank" id="download-pdf-button" className="download-button" 
+                    style={{
+                        marginTop: '50px'
+                    }}>
+                    <img style={{
+                        height: '1rem', 
+                        marginRight: '5px', 
+                        transform: 'translateY(-2px)'
+                    }} src="img/logos/download_light.png" alt="" />
+                    Download as Word Document
+                </Button>
+            </>
         );
         if (this.state.renderForPrint) {
             downloadButton = (
