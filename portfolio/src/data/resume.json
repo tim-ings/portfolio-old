@@ -29,6 +29,7 @@
             "location": "Crawley, WA, Australia",
             "major1": "Computer Science, B.Sc",
             "major2": "Data Science, B.Sc",
+            "awards": [],
             "coursework": [
                 {
                     "title": "Object-oriented Programming and Software Engineering",
@@ -147,6 +148,11 @@
                 "Physics",
                 "Chemistry",
                 "IT"
+            ],
+            "awards": [
+                {
+                    "title": "ICAS Year 10 Computer Skills WA 2012 Medal from UNSW"
+                }
             ],
             "coursework": [
                 {

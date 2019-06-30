@@ -10,6 +10,29 @@ class School extends React.Component {
     }
 
     render() {
+        let awards = [];
+        for (let i = 0; i < this.props.data.awards.length; i++) {
+            let awd = this.props.data.awards[i];
+            awards.push(
+                <li key={i} className="course-work-item">
+                    {awd.title}
+                </li>
+            );
+        }
+
+        let awardsJsx = null;
+        if (this.props.data.awards.length > 0) {
+            awardsJsx = (
+                <>
+                <p>Awards:</p>
+                <ul className="course-work-list">
+                    {awards}
+                </ul>
+                <br />
+                </>
+            );
+        }
+
         let courseWork = [];
         for (let i = 0; i < this.props.data.coursework.length; i++) {
             let cw = this.props.data.coursework[i];
@@ -20,6 +43,15 @@ class School extends React.Component {
                 </li>
             );
         }
+
+        let courseWorkJsx = (
+            <>
+            <p>Coursework:</p>
+            <ul className="course-work-list">
+                {courseWork}
+            </ul>
+            </>
+        );
 
         let tags = new Set();
         // gather all tags
@@ -68,10 +100,8 @@ class School extends React.Component {
                     <Col></Col>
                 </Row>
                 <br />
-                <p>Coursework:</p>
-                <ul className="course-work-list">
-                    {courseWork}
-                </ul>
+                {awardsJsx}
+                {courseWorkJsx}
                 {techTags}
             </Container>
         )
