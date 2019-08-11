@@ -52,15 +52,18 @@ class Project extends React.Component {
         }
 
         // style the github button and logo
-        let btn_github = (
-            <Button target="_blank" rel="noopener noreferrer" style={{margin: '5px'}} href={this.baseGitHubUrl + this.props.data.slug}>
-                <img style={{
-                    height: '1rem',
-                    transform: 'translateY(-2px)'
-                }} src="img/logos/github_light.png" alt=""></img>
-                <span style={{marginLeft: '5px'}}>GitHub</span>
-            </Button>
-        );
+        let btn_github = null;
+        if (!this.props.data.privateRepo) {
+            btn_github = (
+                <Button target="_blank" rel="noopener noreferrer" style={{margin: '5px'}} href={this.baseGitHubUrl + this.props.data.slug}>
+                    <img style={{
+                        height: '1rem',
+                        transform: 'translateY(-2px)'
+                    }} src="img/logos/github_light.png" alt=""></img>
+                    <span style={{marginLeft: '5px'}}>GitHub</span>
+                </Button>
+            );
+        }
 
         // create tech tags that tell the user what was used to create this project
         let tech_tags = [];

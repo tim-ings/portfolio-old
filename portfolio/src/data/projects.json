@@ -148,7 +148,23 @@
         "header_img_url": "img/headers/PetBattleScript.png",
         "hide_download": true
     },
-
+    {
+        "name": "JNS Gardening Solutions",
+        "slug": "JNSGardening",
+        "privateRepo": true,
+        "homepage": true,
+        "category": "website",
+        "description": "JNS Gardening Solutions is gardening bussiness located in Willeton WA. This website was developed as a freelance project primarily utilising react and express",
+        "tech": [
+            "React",
+            "JavaScript",
+            "HTML5",
+            "CSS",
+            "NodeJS"
+        ],
+        "live_demo_url": "https://jnsgardening.com/",
+        "header_img_url": "img/headers/JNSGardening.png"
+    },
     {
         "name": "Movie Rankings",
         "slug": "MovieRankings",
