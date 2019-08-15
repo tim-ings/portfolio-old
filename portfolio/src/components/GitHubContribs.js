@@ -107,11 +107,11 @@ class GitHubEventList extends React.Component {
             activityTags_commit.push(
                 <li key={i}>
                     <button
-                    onClick={() => {document.querySelector(`#commits-list-repo-${repo.id}`).classList.toggle("hidden")}}
+                    onClick={() => {document.querySelector(`#commits-list-repo-${repo.id}-${this.props.month}-${this.props.year}`).classList.toggle("hidden")}}
                     className="dropdown">
                         {commit_uniqueRepos[i].name} {commit_repoCommitCounts[commit_uniqueRepos[i].id]} commits
                     </button>
-                    <ul id={`commits-list-repo-${repo.id}`} className="hidden">
+                    <ul id={`commits-list-repo-${repo.id}-${this.props.month}-${this.props.year}`} className="hidden">
                         {commitTags}
                     </ul>
                 </li>
@@ -150,11 +150,11 @@ class GitHubEventList extends React.Component {
             activityTags_issuesOpened.push(
                 <li key={i}>
                     <button 
-                    onClick={() => {document.querySelector(`#issue-opened-list-repo-${repo.id}`).classList.toggle("hidden")}}
+                    onClick={() => {document.querySelector(`#issue-opened-list-repo-${repo.id}-${this.props.month}-${this.props.year}`).classList.toggle("hidden")}}
                     className="dropdown">
                         {repo.name}
                     </button>
-                    <ul id={`issue-opened-list-repo-${repo.id}`} className="hidden">
+                    <ul id={`issue-opened-list-repo-${repo.id}-${this.props.month}-${this.props.year}`} className="hidden">
                         {issueTags}
                     </ul>
                 </li>
@@ -182,11 +182,11 @@ class GitHubEventList extends React.Component {
             activityTags_issuesClosed.push(
                 <li key={i}>
                     <button
-                    onClick={() => {document.querySelector(`#issue-closed-list-repo-${repo.id}`).classList.toggle("hidden")}}
+                    onClick={() => {document.querySelector(`#issue-closed-list-repo-${repo.id}-${this.props.month}-${this.props.year}`).classList.toggle("hidden")}}
                     className="dropdown">
                         {repo.name}
                     </button>
-                    <ul id={`issue-closed-list-repo-${repo.id}`} className="hidden">
+                    <ul id={`issue-closed-list-repo-${repo.id}-${this.props.month}-${this.props.year}`} className="hidden">
                         {issueTags}
                     </ul>
                 </li>
@@ -219,11 +219,11 @@ class GitHubEventList extends React.Component {
             activityTags_comments.push(
                 <li key={i}>
                     <button 
-                    onClick={() => {document.querySelector(`#comments-repo-${repo.id}`).classList.toggle("hidden")}}
+                    onClick={() => {document.querySelector(`#comments-repo-${repo.id}-${this.props.month}-${this.props.year}`).classList.toggle("hidden")}}
                     className="dropdown">
                         {repo.name}
                     </button>
-                    <ul id={`comments-repo-${repo.id}`} className="hidden">
+                    <ul id={`comments-repo-${repo.id}-${this.props.month}-${this.props.year}`} className="hidden">
                         {commentTags}
                     </ul>
                 </li>
@@ -404,7 +404,9 @@ class GitHubContribs extends React.Component {
                 <GitHubEventList 
                     key={k} 
                     events={months[k]} 
-                    title={`${monthNames[k]} ${year}`} />
+                    title={`${monthNames[k]} ${year}`}
+                    month={k}
+                    year={year} />
             );
         }
         monthTags.reverse();
