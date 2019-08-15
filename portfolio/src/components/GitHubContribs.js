@@ -295,6 +295,21 @@ class GitHubContribs extends React.Component {
     }
 
     componentDidMount() {
+        let githubEvents_age = parseInt(localStorage.getItem("githubEvents_age"));
+        if (githubEvents_age) {
+            let eventsAge = new Date(githubEvents_age);
+            eventsAge.setHours(eventsAge.getHours() + 1);
+            if (eventsAge > new Date()) {
+                console.log("Got GitHub event data from localstorage");
+                let ghEvents = localStorage.getItem("githubEvents");
+                this.setState({
+                    githubEvents: JSON.parse(ghEvents),
+                    failedFetch: false,
+                })
+                return;
+            }
+        }
+
         const gh = new Octokit({
             userAgent: 'tim-ings.com portfolio site'
         });
@@ -314,10 +329,10 @@ class GitHubContribs extends React.Component {
             username: ResumeData.contacts.github
         }).then((res) => {
             console.log("Got activity.listEventsForUser from github:", res);
-            let ghdata = res.data;
-            ghdata.sort((a, b) => new Date(a.created_at) < new Date(b.created_at) ? 1 : -1);
+            localStorage.setItem("githubEvents", JSON.stringify(res.data));
+            localStorage.setItem("githubEvents_age", Date.now());
             this.setState({
-                githubEvents: ghdata,
+                githubEvents: res.data,
                 failedFetch: false,
             })
         }).catch((err) => {
