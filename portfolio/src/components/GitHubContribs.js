@@ -314,8 +314,10 @@ class GitHubContribs extends React.Component {
             username: ResumeData.contacts.github
         }).then((res) => {
             console.log("Got activity.listEventsForUser from github:", res);
+            let ghdata = res.data;
+            ghdata.sort((a, b) => new Date(a.created_at) < new Date(b.created_at) ? 1 : -1);
             this.setState({
-                githubEvents: res.data,
+                githubEvents: ghdata,
                 failedFetch: false,
             })
         }).catch((err) => {
@@ -379,7 +381,7 @@ class GitHubContribs extends React.Component {
             "November",
             "December"
         ];
-        let year = new Date().getYear() + 1900;
+        let year = new Date().getFullYear();
 
         let monthTags = [];
         for (let k in months) {
@@ -390,6 +392,7 @@ class GitHubContribs extends React.Component {
                     title={`${monthNames[k]} ${year}`} />
             );
         }
+        monthTags.reverse();
 
         return (
             <Container className="contrib-container">
