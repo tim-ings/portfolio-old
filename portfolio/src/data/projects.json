@@ -154,7 +154,7 @@
         "privateRepo": true,
         "homepage": true,
         "category": "website",
-        "description": "JNS Gardening Solutions is gardening bussiness located in Willeton WA. This website was developed as a freelance project primarily utilising react and express",
+        "description": "JNS Gardening Solutions is a gardening bussiness located in Willeton WA. This website was developed as a freelance project primarily utilising react and express",
         "tech": [
             "React",
             "JavaScript",
