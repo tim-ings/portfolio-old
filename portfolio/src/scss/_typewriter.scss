@@ -1,13 +1,13 @@
 /* The typing effect */
 @keyframes typing {
-    from { width: 15% }
+    from { width: 50% }
     to { width: 100% }
 }
 
 /* The typewriter cursor effect */
 @keyframes blink-caret {
-    from, to { border-color: transparent }
-    50% { border-color: #d7d7d7; }
+    from, to { border-color: #d7d7d7; }
+    50% { border-color: transparent }
 }
 
 .hover-typewriter-container {
@@ -28,7 +28,7 @@
             white-space: nowrap; /* Keeps the content on a single line */
             margin: 0 auto; /* Gives that scrolling effect as the typing happens */
             animation: 
-                typing 0.5s steps(40, end), 
+                //typing 0.1s steps(2, end), 
                 blink-caret 0.75s step-end infinite;
         }
     }
