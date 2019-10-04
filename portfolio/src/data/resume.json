@@ -132,6 +132,46 @@
                         "Python",
                         "Bootstrap"
                     ]
+                },
+                {
+                    "title": "Algorithms, Agents and Artificial Intelligence",
+                    "code": "CITS3001",
+                    "tags": [
+                        "Java",
+                        "Data Structures"
+                    ]
+                },
+                {
+                    "title": "Discrete Structures",
+                    "code": "CITS2211",
+                    "tags": [
+                        "Maths"
+                    ]
+                },
+                {
+                    "title": "High Performance Computing",
+                    "code": "CITS3402",
+                    "tags": [
+                        "C",
+                        "CPP",
+                        "Data Structures",
+                        "Networking"
+                    ]
+                },
+                {
+                    "title": "Professional Computing",
+                    "code": "CITS3200",
+                    "tags": [
+                        "Bootstrap",
+                        "HTML5",
+                        "CSS",
+                        "JavaScript",
+                        "Django",
+                        "Python",
+                        "Sass",
+                        "Web Development",
+                        "Writing"
+                    ]
                 }
             ]
         },
