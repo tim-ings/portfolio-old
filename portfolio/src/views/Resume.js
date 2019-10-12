@@ -110,11 +110,6 @@ class Resume extends React.Component {
                 {downloadButton}
                 <Row>
                     <Col md={3}>
-                        <div className="resume-section">
-                            <div className="avatar-container">
-                                <img src="img/avatar.png" alt=""></img>
-                            </div>
-                        </div>
                         <div className="resume-section border-box-shadow">
                             <h1 className="resume-header">Profile</h1>
                             <p className="res-bio">

@@ -42,11 +42,6 @@ class Home extends React.Component {
                 <Row>
                     <Col md={3}>
                         <div className="home-section dark-border-box-shadow">
-                            <div className="home-section">
-                                <div className="avatar-container">
-                                    <img src="img/avatar.png" alt=""></img>
-                                </div>
-                            </div>
                             <div>
                                 <h1 className="home-header">Profile</h1>
                                 <p className="res-bio">

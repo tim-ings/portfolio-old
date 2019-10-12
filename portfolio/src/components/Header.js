@@ -74,17 +74,6 @@ class Header extends React.Component {
 
         return (
             <Navbar collapseOnSelect expand="lg" variant="dark" fixed="top">
-                <Navbar.Brand href="/">
-                    <img
-                        src="img/signature_light.png"
-                        alt=""
-                        height="30"
-                        width="auto"
-                        className="d-inline-block align-top"
-                        style={{ paddingRight: "20px" }}
-                    />
-                    Tim Ings
-                </Navbar.Brand>
                 <Navbar.Toggle aria-controls="basic-navbar-nav" />
                 <Navbar.Collapse id="basic-navbar-nav">
                     <Nav className="mr-auto">
