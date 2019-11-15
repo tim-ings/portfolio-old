@@ -170,7 +170,7 @@
         "slug": "case",
         "homepage": true,
         "category": "website",
-        "description": "The Case Studies in Pharmacy project aims to develop a user-populated database (with a web-based user interface) that will allow pharmacy students to create, practice, share, and comment on real-life case studies",
+        "description": "UWA Pharmacy case is a web application that was developed by a team of UWA students for Dr. Kenneth Lee and the UWA Master of Pharmacy course. It allows students to create, practice, share, and comment on real life case studies.",
         "tech": [
             "Django",
             "JavaScript",
