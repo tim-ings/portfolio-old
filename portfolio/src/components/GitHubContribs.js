@@ -99,7 +99,7 @@ class GitHubEventList extends React.Component {
                         commitTags.push(
                             <li key={`${j}${k}`}>
                                 <Octicon icon={GitCommit} />
-                                <a href={`https://github.com/tim-ings/tim-ings.com/commit/${ghe.payload.commits[k].sha}`}>
+                                <a href={`https://github.com/${ghe.repo.name}/commit/${ghe.payload.commits[k].sha}`}>
                                     {ghe.payload.commits[k].message}
                                 </a>
                             </li>);
@@ -203,7 +203,6 @@ class GitHubEventList extends React.Component {
             for (let j = 0; j < eventComments.length; j++) {
                 let ghe = eventComments[j];
                 if (ghe.repo.id === repo.id) {
-                    console.log("adding a comment: ", ghe);
                     let issueType = ghe.payload.issue.pull_request ? "pull request" : "issue";
                     commentTags.push(
                         <li key={j}>
