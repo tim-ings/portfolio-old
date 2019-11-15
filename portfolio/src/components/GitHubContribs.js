@@ -213,8 +213,10 @@ class GitHubEventList extends React.Component {
                                 </a>
                             </span>
                             <div className="event-comment-container">
-                                <Octicon icon={Comment} />
-                                <span className="event-comment-body"><q>{ghe.payload.comment.body}</q></span>
+                                <a href={ghe.payload.comment.html_url}>
+                                    <Octicon icon={Comment} />
+                                    <span className="event-comment-body"><q>{ghe.payload.comment.body}</q></span>
+                                </a>
                             </div>
                         </li>
                     );
