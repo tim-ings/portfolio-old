@@ -166,6 +166,22 @@
         "header_img_url": "img/headers/JNSGardening.png"
     },
     {
+        "name": "UWA Pharmacy Case",
+        "slug": "case",
+        "homepage": true,
+        "category": "website",
+        "description": "The Case Studies in Pharmacy project aims to develop a user-populated database (with a web-based user interface) that will allow pharmacy students to create, practice, share, and comment on real-life case studies",
+        "tech": [
+            "Django",
+            "JavaScript",
+            "HTML5",
+            "CSS",
+            "Sass",
+            "Bootstrap"
+        ],
+        "header_img_url": "img/headers/CasePharmacy.png"
+    },
+    {
         "name": "Movie Rankings",
         "slug": "MovieRankings",
         "homepage": true,
