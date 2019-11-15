@@ -203,10 +203,12 @@ class GitHubEventList extends React.Component {
             for (let j = 0; j < eventComments.length; j++) {
                 let ghe = eventComments[j];
                 if (ghe.repo.id === repo.id) {
+                    console.log("adding a comment: ", ghe);
+                    let issueType = ghe.payload.issue.pull_request ? "pull request" : "issue";
                     commentTags.push(
                         <li key={j}>
                             <span className="event-title">
-                                Replied to issue <a href={ghe.payload.issue.html_url} className="no-dec">
+                                Replied to {issueType} <a href={ghe.payload.issue.html_url} className="no-dec">
                                     <span className="event-issue-number">#{ghe.payload.issue.number}</span>
                                 </a>
                             </span>
