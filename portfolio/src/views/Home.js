@@ -59,7 +59,7 @@ class Home extends React.Component {
                         </div>
                     </Col>
                     <Col md={5} style={{padding:'0'}}>
-                        <div className="home-section dark-border-box-shadow" style={{ textAlign: 'center' }}>
+                        <div className="home-section dark-border-box-shadow" style={{ textAlign: 'left' }}>
                             <h3>Random Project</h3>
                             <Link to="/portfolio" style={{paddingBottom: "20px"}}>View more in my portfolio</Link>
                             <Project data={ProjectData[projectIndex]} />
