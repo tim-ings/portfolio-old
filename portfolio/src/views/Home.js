@@ -66,7 +66,7 @@ class Home extends React.Component {
                         </div>
                     </Col>
                     <Col md={4}>
-                        <div className="github-activity-container dark-border-box-shadow">
+                        <div className="github-activity-container dark-border-box-shadow dark-scrollbar">
                             <GitHubContribs />
                         </div>
                     </Col>

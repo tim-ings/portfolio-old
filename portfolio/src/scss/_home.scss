@@ -61,3 +61,24 @@ p.card-text {
         margin-left: 10px;
     }
 }
+
+
+/* width */
+.dark-scrollbar::-webkit-scrollbar {
+    width: 10px;
+}
+
+/* Track */
+.dark-scrollbar::-webkit-scrollbar-track {
+    background: #3f3f3f;
+}
+
+/* Handle */
+.dark-scrollbar::-webkit-scrollbar-thumb {
+    background: #444;
+}
+
+/* Handle on hover */
+.dark-scrollbar::-webkit-scrollbar-thumb:hover {
+    background: #555;
+}
