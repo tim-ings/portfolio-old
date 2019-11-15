@@ -40,7 +40,7 @@ class Home extends React.Component {
             </div>
             <Container className="home-page">
                 <Row>
-                    <Col md={3}>
+                    <Col md={3} >
                         <div className="home-section dark-border-box-shadow">
                             <div>
                                 <h1 className="home-header">Profile</h1>

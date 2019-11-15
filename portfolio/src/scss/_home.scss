@@ -82,3 +82,52 @@ p.card-text {
 .dark-scrollbar::-webkit-scrollbar-thumb:hover {
     background: #555;
 }
+
+@media (min-width: 768px) {
+    .col-md-3 {
+        max-width: initial !important;
+    }
+    
+    .col-md-4 {
+        max-width: initial !important;
+    }
+    
+    .col-md-5 {
+        max-width: initial !important;
+    }
+}
+
+@media (max-width: 1200px) {
+    .row {
+        display: block !important;
+        margin: auto;
+    }
+
+    .col-md-3 {
+        margin: auto;
+    }
+    
+    .col-md-4 {
+        margin: auto;
+    }
+    
+    .col-md-5 {
+        margin: auto;
+    }
+
+    .home-page.container {
+        max-width: 500px;
+    }
+}
+
+.col-md-3 {
+    min-width: 285px;
+}
+
+.col-md-4 {
+    min-width: 380px;
+}
+
+.col-md-5 {
+    min-width: 475px;
+}
