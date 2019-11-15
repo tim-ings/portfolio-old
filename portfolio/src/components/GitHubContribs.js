@@ -76,10 +76,12 @@ class GitHubEventList extends React.Component {
                     }
                     break;
                 case "CreateEvent":
-                    eventCreates.push(ghe);
+                    if (ghe.payload.ref_type === "repository") {
+                        eventCreates.push(ghe);
+                    }
                     break;
                 default:
-                    console.log("unknown event type:", this.props.events.type);
+                    console.log("Unknown event type:", this.props.events.type);
             }
         }
 
@@ -230,9 +232,9 @@ class GitHubEventList extends React.Component {
             );
         }
 
-        return (
-            <div>
-                <h1 className="section section-title">{this.props.title}</h1>
+        let commitsJsx = null;
+        if (commit_count !== 0) {
+            commitsJsx = (
                 <div className="section section-commits">
                     <Octicon icon={RepoPush} />
                     <span>
@@ -242,6 +244,12 @@ class GitHubEventList extends React.Component {
                         {activityTags_commit}
                     </ul>
                 </div>
+            );
+        }
+
+        let repoCreatesJsx = null;
+        if (eventCreates.length !== 0) {
+            repoCreatesJsx = (
                 <div className="section section-creates">
                     <Octicon icon={Repo} />
                     <span>
@@ -251,6 +259,12 @@ class GitHubEventList extends React.Component {
                         {activityTags_create}
                     </ul>
                 </div>
+            );
+        }
+
+        let issueOpensJsx = null;
+        if (eventIssuesOpened.length !== 0) {
+            issueOpensJsx = (
                 <div className="section section-issues section-issues-opened">
                     <Octicon icon={IssueOpened} />
                     <span>
@@ -260,6 +274,12 @@ class GitHubEventList extends React.Component {
                         {activityTags_issuesOpened}
                     </ul>
                 </div>
+            );
+        }
+
+        let issueClosesJsx = null;
+        if (eventIssuesClosed.length !== 0) {
+            issueClosesJsx = (
                 <div className="section section-issues section-issues-closed">
                     <Octicon icon={IssueClosed} />
                     <span>
@@ -269,6 +289,12 @@ class GitHubEventList extends React.Component {
                         {activityTags_issuesClosed}
                     </ul>
                 </div>
+            );
+        }
+
+        let commentWritesJsx = null;
+        if (eventComments.length !== 0) {
+            commentWritesJsx = (
                 <div className="section section-comments">
                     <Octicon icon={Comment} />
                     <span>
@@ -278,6 +304,17 @@ class GitHubEventList extends React.Component {
                         {activityTags_comments}
                     </ul>
                 </div>
+            );
+        }
+
+        return (
+            <div>
+                <h1 className="section section-title">{this.props.title}</h1>
+                {commitsJsx}
+                {repoCreatesJsx}
+                {issueOpensJsx}
+                {issueClosesJsx}
+                {commentWritesJsx}
             </div>
         );
     }
@@ -315,7 +352,7 @@ class GitHubContribs extends React.Component {
         });
 
         // do not get rate limited by github while running in dev mode
-        if (window.location.hostname === "localhost") {
+        if (window.location.hostname === "localhost" && false) {
             console.warn("USING SAMPLE DATA:", TestEventData);
             this.setState({
                 githubEvents: TestEventData,
@@ -326,7 +363,9 @@ class GitHubContribs extends React.Component {
 
         // get all our activity
         gh.activity.listEventsForUser({
-            username: ResumeData.contacts.github
+            username: ResumeData.contacts.github,
+            per_page: 100,
+            page: 1,
         }).then((res) => {
             console.log("Got activity.listEventsForUser from github:", res);
             localStorage.setItem("githubEvents", JSON.stringify(res.data));
