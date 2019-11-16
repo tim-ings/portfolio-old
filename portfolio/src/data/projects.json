@@ -177,9 +177,11 @@
             "HTML5",
             "CSS",
             "Sass",
-            "Bootstrap"
+            "Bootstrap",
+            "Python"
         ],
-        "header_img_url": "img/headers/CasePharmacy.png"
+        "header_img_url": "img/headers/CasePharmacy.png",
+        "hide_download": true
     },
     {
         "name": "Movie Rankings",
