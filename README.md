@@ -1,2 +1,4 @@
+# *NEW* -> https://github.com/tim-ings/portfolio
+
 # tim-ings.com
-Personal portfolio website
+Old personal portfolio website
